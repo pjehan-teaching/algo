@@ -1,0 +1,109 @@
+$algobox-color-red: #810303;
+$algobox-color-brown: #9A4D01;
+$algobox-color-blue: #0000CC;
+$algobox-color-purple: #810786;
+$algobox-color-yellow: #BB8800;
+$algobox-color-orange: #DD6F06;
+
+.reveal {
+  .algobox {
+    padding: 0 1rem;
+    text-align: left;
+    background-color: white;
+
+    &-color {
+      &-red {
+        color: $algobox-color-red;
+      }
+
+      &-orange {
+        color: $algobox-color-brown;
+      }
+
+      &-blue {
+        color: $algobox-color-blue;
+      }
+    }
+
+    &-block {
+      margin-left: 1rem;
+
+      &-functions {
+        @extend .algobox-block;
+        &::before {
+          content: "FONCTIONS_UTILISEES";
+          margin-left: -1rem;
+          color: $algobox-color-brown;
+        }
+      }
+
+      &-variables {
+        @extend .algobox-block;
+        &::before {
+          content: "VARIABLES";
+          display: block;
+          margin-left: -1rem;
+          color: $algobox-color-red;
+        }
+      }
+
+      &-instructions {
+        @extend .algobox-block;
+        &::before {
+          content: "DEBUT_ALGORITHME";
+          display: block;
+          margin-left: -1rem;
+          color: $algobox-color-red;
+        }
+
+        &::after {
+          content: "FIN_ALGORITHME";
+          display: block;
+          margin-left: -1rem;
+          color: $algobox-color-red;
+        }
+      }
+
+      &-if,
+      &-for,
+      &-while {
+        @extend .algobox-block;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-instruction {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    &-keyword {
+      color: $algobox-color-blue;
+    }
+
+    &-condition,
+    &-for,
+    &-while {
+      margin-left: 1rem;
+
+      &-text {
+        &:first-child {
+          margin-left: -1rem;
+        }
+      }
+    }
+
+    &-condition-text {
+      color: $algobox-color-purple;
+    }
+
+    &-for-text {
+      color: $algobox-color-yellow;
+    }
+
+    &-while-text {
+      color: $algobox-color-orange;
+    }
+  }
+}

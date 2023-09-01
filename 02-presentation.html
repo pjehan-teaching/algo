@@ -4,4 +4,231 @@
         <h2>Présentation</h2>
     </section>
 
+    <section>
+        <h3>Définition</h3>
+        <blockquote>
+            <p>
+                Un ordinateur est une machine électronique qui fonctionne par la lecture séquentielle d'un ensemble d'<strong>instructions</strong>,
+                organisées en programmes, qui lui font exécuter des <strong>opérations logiques et arithmétiques</strong> sur des chiffres <strong>binaires</strong>.
+            </p>
+            <footer><cite title="Wikipédia">Wikipédia</cite></footer>
+        </blockquote>
+    </section>
+
+    <section>
+        <h3>Exemple : Recette de cuisine 🥞</h3>
+        <ol>
+            <li>Mettre la farine dans une terrine et former un puits.</li>
+            <li>Y déposer les œufs entiers, le sucre, l'huile et le beurre.</li>
+            <li>Mélanger avec un fouet en ajoutant au fur et à mesure le lait.</li>
+            <li>Parfumer de rhum.</li>
+            <li>Mettre de l'huile dans une poêle et faire cuire la pâte.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h3>Exemple : Préparer un café ☕</h3>
+        <ol>
+            <li>Mettre la capsule dans la machine.</li>
+            <li>Appuyer sur le bouton de mise en marche.</li>
+            <li><strong>S'il n'y a plus d'eau</strong> remplir le réservoir.</li>
+            <li>Attendre que le café soit prêt.</li>
+            <li>Prendre la tasse.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h3>Exemple : Faire des courses 🛒</h3>
+        <ol>
+            <li>Aller au supermarché.</li>
+            <li>Prendre un chariot.</li>
+            <li>Mettre des produits dans le chariot.</li>
+            <li>Aller à la caisse.</li>
+            <li><strong>Tant qu'il reste des produits dans le chariot</strong> les déposer sur le tapis roulant.</li>
+            <li>Payer.</li>
+            <li><strong>Tant qu'il reste des produits sur le tapis roulant</strong> les déposer dans le chariot.</li>
+            <li>Aller à la voiture.</li>
+            <li><strong>Tant qu'il reste des produits dans le chariot</strong> les déposer dans le coffre de la voiture.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h3>Concepts d'un algorithme</h3>
+        <ul>
+            <li>Entrées</li>
+            <li>
+                Traitements
+                <ul>
+                    <li>Instructions</li>
+                    <li>Conditions</li>
+                    <li>Boucles</li>
+                </ul>
+            </li>
+            <li>Sorties</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Exemple d'algorithme avec diagramme</h3>
+        <img src="assets/images/friendship_algorithm.jpg" alt="Sheldon Cooper Friendship algorithm">
+    </section>
+
+    <section>
+        <h3>Algorithme != Langage de programmation</h3>
+        <p>Un algorithme n'est pas associé à un langage de programmation en particulier.</p>
+        <p>Il est donc possible, à partir d'un seul algorithme, d'écrire le code source correspondant dans différents langages.</p>
+        <img src="assets/images/algo-to-language.png" alt="Algo vers langage">
+        <p>Cependant, en fonction des spécificités d'un langage, un même algorithme ne pourra pas toujours s'appliquer (paradigme objet par exemple).</p>
+    </section>
+
+    <section>
+        <h3>Fonctionnement d'un ordinateur</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HB4I2CgkcCo?si=R3AevQYOrRf7okw6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
+
+    <section>
+        <h3>AlgoBox</h3>
+        <p>
+            Afin de vous familiariser avec les concepts de base de l'algorithmique, nous allons utiliser le logiciel
+            <a href="https://www.xm1math.net/algobox/" target="_blank">AlgoBox</a>.
+        </p>
+        <p>Il s'agit d'un logiciel libre, gratuit et multi-plateforme destiné à l'initiation à l'algorithmique.</p>
+        <p>
+            Nous utiliserons ce logiciel dans un premier temps avant d'utiliser un langage de programmation
+            afin de nous focaliser sur l'algorithmique plutôt que sur la syntaxe d'un langage spécifique.
+        </p>
+    </section>
+
+    <section>
+        <h3>Indentation</h3>
+        <p>L'indentation consiste en l'ajout de tabulations ou d'espaces dans un fichier, pour une meilleure lecture et compréhension du code.</p>
+        <p>Dans l'exemple ci-dessous, le code de gauche n'est pas indenté tandis que celui de droite est correctement indenté :</p>
+        <div class="container">
+            <div class="col">
+                <pre><code class="language-c">int main (int argc, char *argv[])
+{
+int variable;
+variable = 2;
+if (variable > 3)
+{
+printf("Hello world!\n");
+}
+return 0;
+}</code></pre>
+            </div>
+            <div class="col">
+<pre><code class="language-c">int main (int argc, char *argv[])
+{
+    int variable;
+    variable = 2;
+    if (variable > 3)
+    {
+        printf("Hello world!\n");
+    }
+    return 0;
+}</code></pre>
+            </div>
+        </div>
+        <footer>
+            <a href="#" target="_blank" class="info">AlgoBox fera l'indentation automatiquement</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Accolades</h3>
+        <p>
+            Il existe en règle générale deux façons d'écrire les accolades.
+            On pourra opter pour l'une ou pour l'autre en fonction de ses préférences personnelles, mais aussi du langage de programmation utilisé.
+        </p>
+        <div class="container">
+            <div class="col">
+                <pre><code class="language-c">int main (int argc, char *argv[])
+{
+    int variable;
+    variable = 2;
+    if (variable > 3)
+    {
+        printf("Hello world!\n");
+    }
+    return 0;
+}</code></pre>
+            </div>
+            <div class="col">
+                <pre><code class="language-c">int main (int argc, char *argv[]) {
+    int variable;
+    variable = 2;
+    if (variable > 3) {
+        printf("Hello world!\n");
+    }
+    return 0;
+}</code></pre>
+            </div>
+        </div>
+        <footer>
+            <a href="#" target="_blank" class="info" style="font-size: 0.8em;">AlgoBox fera automatiquement l'instruction de début/fin d'un bloc</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Interlignes et espaces</h3>
+        <p>
+            Il est important de laisser des espaces entre les différents éléments d'un programme afin de le rendre plus lisible.
+            On pourra par exemple ajouter des espaces :
+        </p>
+        <div class="container">
+            <div class="col">
+                <pre><code class="language-c">int main (int argc, char *argv[])
+{
+    int variable;
+    variable = 2;
+
+    if (variable > 3)
+    {
+        printf("Hello world!\n");
+    }
+
+    return 0;
+}</code></pre>
+            </div>
+            <div class="col">
+                <pre><code class="language-c">int main (int argc, char *argv[])
+{
+    int variable;
+    variable = 2;
+    if (variable > 3)
+    {
+        printf("Hello world!\n");
+    }
+    return 0;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Commentaires</h3>
+        <p>
+            Les commentaires sont des éléments du code qui ne seront pas interprétés par l'ordinateur.
+            Ils permettent d'ajouter des informations supplémentaires dans le code afin de le rendre plus lisible.
+        </p>
+        <pre><code class="language-c">/**
+ * Fonction principale de mon programme
+ * @param int argc Le nombre d'arguments
+ * @param char* argv Les arguments passés en paramètre
+ * @return int
+ */
+int main(int argc, char *argv[])
+{
+   int variable;
+   variable = 2;
+   // Si ma variable est supérieur à 3
+   if (variable > 3)
+   {
+      printf("Hello world!\n"); // Affiche Hello world! dans la console
+   }
+   return 0;
+}
+</code></pre>
+    </section>
+
 </section>

@@ -1,6 +1,6 @@
 # Algo
 
-[algo.slides.pierre-jehan.com](http://uml.slides.pierre-jehan.com)
+[algo.slides.pierre-jehan.com](http://algo.slides.pierre-jehan.com)
 
 ## Installation
 
