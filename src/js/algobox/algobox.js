@@ -12,7 +12,6 @@ document.getElementById('revealexpress').addEventListener('loaded', function(eve
       .then(text => {
         const xml = parser.parseFromString(text, 'text/xml');
         const root = xml.documentElement;
-        console.log(root)
         const container = document.createElement('div');
         container.classList.add('algobox');
         algorithm.appendChild(container);
@@ -31,6 +30,16 @@ document.getElementById('revealexpress').addEventListener('loaded', function(eve
             }
           }
         }
+
+        const btnDownload = document.createElement('button');
+        btnDownload.classList.add('algobox-download');
+        btnDownload.addEventListener('click', function() {
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(new Blob([text], {type: 'text/xml'}));
+          a.download = algorithm.dataset.alg.split('/').pop();
+          a.click();
+        });
+        container.appendChild(btnDownload);
       });
   }
 
