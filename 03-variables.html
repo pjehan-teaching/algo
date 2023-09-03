@@ -10,7 +10,10 @@
         <p>Pour déclarer une variable, il faut préciser son <strong>type</strong> et son <strong>nom</strong>.</p>
         <p>Le type d'une variable définit la nature de la valeur qu'elle peut contenir.</p>
         <p>Le nom d'une variable est un identifiant qui permet de la désigner.</p>
-        <img src="assets/images/algobox-declare-variable.png" alt="AlgoBox déclarer variable">
+        <figure>
+            <img src="assets/images/algobox-declare-variable.png" alt="AlgoBox déclarer variable">
+            <figcaption>Déclarer une variable sur AlgoBox</figcaption>
+        </figure>
         <footer>
             <a href="#" class="warning">Il est important de bien nommer les variables !</a>
         </footer>
@@ -69,14 +72,134 @@
         <p>AlgoBox ne permet pas de déclarer et d'affecter une variable en une seule instruction (mais la plupart des langages le permettent).</p>
         <p>Il faudra donc dans un premier temps <strong>déclarer</strong> la variable pour ensuite lui <strong>affecter</strong> une valeur.</p>
         <p>Positionnez-vous sur l'instruction <code class="algobox algobox-color-red">DEBUT_ALGORITHME</code> puis cliquez sur les boutons suivants :</p>
-        <img src="assets/images/algobox-new-line.png" alt="AlgoBox nouvelle ligne">
-        <img src="assets/images/algobox-set-variable.png" alt="AlgoBox affectation variable">
+        <figure>
+            <img src="assets/images/algobox-new-line.png" alt="AlgoBox nouvelle ligne">
+            <figcaption>Créer une nouvelle ligne sur AlgoBox</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/images/algobox-set-variable.png" alt="AlgoBox affectation variable">
+            <figcaption>Affecter une variable sur AlgoBox</figcaption>
+        </figure>
     </section>
 
     <section>
         <h3>Affectation d'une variable</h3>
-        <p>Reproduire le code ci-dessous dans AlgoBox puis l'exécuter :</p>
-        <div data-alg="assets/files/test.alg"></div>
+        <div class="instructions">
+            <ol>
+                <li>Reproduire le code ci-dessous dans AlgoBox.</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+        <div data-alg="assets/files/variable-set.alg"></div>
+    </section>
+
+    <section>
+        <h3>Affectation d'une variable</h3>
+        <p>Il est possible de demander à l'utilisateur de <strong>saisir une valeur</strong> qui sera ensuite <strong>stockée dans une variable</strong>.</p>
+        <p>Pour cela, vous devez créer une nouvelle ligne puis cliquer sur le bouton suivant :</p>
+        <figure>
+            <img src="assets/images/algobox-read-variable.png" alt="AlgoBox lire variable">
+            <figcaption>Saisir une variable sur AlgoBox</figcaption>
+        </figure>
+        <div class="instructions">
+            <ol>
+                <li>Modifier le code précédent pour demander à l'utilisateur de saisir son âge.</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Affichage d'un message</h3>
+        <p>Actuellement, notre algorithme n'affiche rien à l'écran.</p>
+        <p>
+            Pour afficher un message à l'utilisateur, les langages de programmation disposent tous d'une ou plusieurs fonctions
+            (<code>echo</code> en PHP, <code>Console.WriteLine</code> en C#, <code>print</code> en Python...)
+        </p>
+        <p>Pour cela, vous devez créer une nouvelle ligne puis cliquer sur le bouton suivant :</p>
+        <figure>
+            <img src="assets/images/algobox-display-message.png" alt="AlgoBox afficher message">
+            <figcaption>Afficher un message sur AlgoBox</figcaption>
+        </figure>
+        <div class="instructions">
+            <ol>
+                <li>Afficher le message "Saisissez votre âge." avant </li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Affichage d'une variable</h3>
+        <p>Il est également possible d'afficher le contenu d'une variable.</p>
+        <p>Dans AlgoBox, il faut créer une nouvelle ligne (<span class="keyboard-key">Ctrl</span> + <span class="keyboard-key">Entrée</span>) puis cliquer sur ce bouton :</p>
+        <figure>
+            <img src="assets/images/algobox-display-variable.png" alt="AlgoBox afficher variable">
+            <figcaption>Afficher une variable sur AlgoBox</figcaption>
+        </figure>
+        <div class="instructions">
+            <ol>
+                <li>Afficher la variable <code>age</code>.</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Concaténation</h3>
+        <p>En programmation, la concaténation consiste à "coller" ensemble plusieurs chaînes de caractères.</p>
+        <p>Malheureusement, AlgoBox ne permet pas d'afficher un message en effectuant une concaténation.</p>
+        <p>Il faut donc créer plusieurs lignes en alternant <strong>AFFICHER Variable</strong> et <strong>Afficher MESSAGE</strong>.</p>
+        <div class="instructions">
+            <ol>
+                <li>Afficher le message "Vous avez 15 ans." en utilisant la variable <code>age</code>.</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Concaténation</h3>
+        <p>Il existe cependant une autre solution pour simplifier l'algorithme précédent.</p>
+        <p>Il est possible d'effectuer des concaténations lors de l'affectation d'une variable.</p>
+        <p>Le signe utilisé pour effectuer des concaténations avec AlgoBox est le signe "+".</p>
+        <div class="instructions">
+            <ol>
+                <li>Créer une nouvelle variable <code>message</code> de type <code>CHAINE</code>.</li>
+                <li>Lui affecter la valeur "Vous avez 15 ans." en effectuant une concaténation.</li>
+                <li>Afficher la variable <code>message</code>.</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Résumé</h3>
+        <p>Vous devriez maintenant avoir l'algorithme suivant :</p>
+        <div data-alg="assets/files/variable-display.alg"></div>
+    </section>
+
+    <section>
+        <h3>Calculs</h3>
+        <p>Il est également possible d'effectuer des calculs simples en utilisant les signes suivants :</p>
+        <ul>
+            <li><strong>+</strong> : Addition</li>
+            <li><strong>-</strong> : Soustraction</li>
+            <li><strong>*</strong> : Multiplication</li>
+            <li><strong>/</strong> : Division</li>
+            <li><strong>%</strong> : Modulo (reste de la division)</li>
+        </ul>
+        <p>Pour cela, vous pouvez cliquer sur le bouton suivant sur AlgoBox :</p>
+        <figure>
+            <img src="assets/images/algobox-display-calculation.png" alt="AlgoBox afficher calcul">
+            <figcaption>Afficher un calcul sur AlgoBox</figcaption>
+        </figure>
+        <div class="instructions">
+            <ol>
+                <li>Afficher le message "Vous aurez bientôt X ans." sachant que X doit être égale à l'age de l'utilisateur à son prochain anniversaire.</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
     </section>
 
 </section>
