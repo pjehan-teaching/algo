@@ -4,4 +4,135 @@
         <h2>Conditions</h2>
     </section>
 
+    <section>
+        <h3>Définition</h3>
+        <p>Les conditions permettent de <strong>tester des valeurs</strong> et d'exécuter des instructions <strong>en fonction du résultat</strong> de ces tests.</p>
+        <p>Un exemple de condition dans un programme pourrait être :</p>
+        <p><strong>Si</strong> l'utilisateur est administrateur <strong>alors</strong> afficher le bouton "Admin".</p>
+        <p>Pour créer une nouvelle condition sur AlgoBox, créer une nouvelle ligne puis cliquer sur le bouton suivant :</p>
+        <figure>
+            <img src="assets/images/algobox-condition.png" alt="AlgoBox ajouter condition">
+            <figcaption>Ajouter une condition sur AlgoBox</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>Les opérateurs de comparaison</h3>
+        <p>Les opérateurs de comparaison permettent de comparer des valeurs entre elles.</p>
+        <p>Voici la liste des opérateurs de comparaison :</p>
+        <ul>
+            <li><strong>==</strong> : égal à</li>
+            <li><strong>!=</strong> : différent de</li>
+            <li><strong>&lt;</strong> : inférieur à</li>
+            <li><strong>&gt;</strong> : supérieur à</li>
+            <li><strong>&lt;=</strong> : inférieur ou égal à</li>
+            <li><strong>&gt;=</strong> : supérieur ou égal à</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Vous allez maintenant utiliser une condition pour améliorer l'exercice du chapitre précédent :</p>
+        <div class="instructions">
+            <ol>
+                <li>Modifier l'algorithme précédent pour afficher le message "Vous êtes majeur" à la fin du script si l'utilisateur à plus de 18 ans.</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>L'instruction "sinon"</h3>
+        <p>Il est possible d'ajouter une instruction "sinon" à la fin d'une condition. Cette instruction sera exécutée si la condition n'est pas remplie.</p>
+        <p>Pour cela, il faut cocher la case "Ajouter SINON" lorsque l'on crée/modifie une condition sur AlgoBox :</p>
+        <figure>
+            <img src="assets/images/algobox-condition-else.png" alt="AlgoBox ajouter condition sinon">
+            <figcaption>Ajouter une condition SINON sur AlgoBox</figcaption>
+        </figure>
+        <p>La plupart des langages de programmation permettent d'écrire des instructions "SINON SI" mais AlgoBox ne le permet pas.</p>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Vous allez maintenant utiliser une condition avec l'instruction "sinon" pour améliorer l'exercice précédent :</p>
+        <div class="instructions">
+            <ol>
+                <li>Ajouter une condition pour afficher le message "Vous pouvez conduire un scooter." si l'utilisateur a plus de 16 ans.</li>
+                <li>Sinon, afficher le message "Vous n'avez pas le droit de conduire de scooter.".</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Combinaison de conditions</h3>
+        <p>Il est possible de combiner plusieurs conditions en utilisant les opérateurs logiques <strong>ET</strong> et <strong>OU</strong>.</p>
+        <p>Voici un exemple de combinaison de conditions :</p>
+        <p><strong>Si</strong> l'utilisateur est administrateur <strong>ET</strong> qu'il a plus de 18 ans <strong>alors</strong> afficher le bouton "Admin".</p>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Utilisez les combinaisons pour déterminer si l'utilisateur a le droit à une carte jeune SCNF.</p>
+        <p>Pour avoir le droit à une carte jeune SNCF, l'utilisateur doit avoir minimum 12 ans et moins de 27 ans.</p>
+        <div class="instructions">
+            <ol>
+                <li>Modifier l'algorithme précédent pour afficher le message "Carte jeune SNCF" à la fin du script si l'utilisateur à minimum 12 ans et moins de 27 ans.</li>
+                <li>Tester l'algorithme.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Imbrication de conditions</h3>
+        <p>Il est possible d'imbriquer des conditions en ajoutant une condition dans une autre condition.</p>
+        <p>Voici un exemple d'algorithme utilisant l'imbrication de conditions :</p>
+        <div data-alg="assets/files/condition-imbrication.alg"></div>
+        <footer>
+            <a href="#" class="info">Est-il possible d'optimiser l'écriture de cet algorithme ?</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>Demander à l'utilisateur de saisir ses 2 notes de 1ère et 2ème années de BTS.</li>
+                <li>Si la moyenne de ses notes est inférieur à 10, afficher le message "Il faut réviser au plus vite !".</li>
+                <li>Sinon, si sa note de 1ère année est plus élevée que celle de 2ème année, afficher le message "Attention à ne pas se décourager !".</li>
+                <li>Sinon, afficher le message "L'examen devrait bien se passer :)".</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Créer un programme permettant de calculer son Indice de Masse Corporelle (IMC).</p>
+        <p>La formule de calcul de l'IMC est la suivante :</p>
+        <p>IMC = poids / taille²</p>
+        <p>Le poids est exprimé en kilogrammes et la taille en mètres.</p>
+        <p>Voici les différentes catégories de poids :</p>
+        <ul>
+            <li>IMC inférieur à 16,5 : dénutrition</li>
+            <li>IMC entre 16,5 et 18,5 : maigreur</li>
+            <li>IMC entre 18,5 et 25 : corpulence normale</li>
+            <li>IMC entre 25 et 30 : surpoids</li>
+            <li>IMC entre 30 et 35 : obésité modérée</li>
+            <li>IMC entre 35 et 40 : obésité sévère</li>
+            <li>IMC supérieur à 40 : obésité morbide</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Créer un programme permettant de calculer un prix TTC à partir du HT et inversement.</p>
+        <p>Le programme doit demander à l'utilisateur de saisir le prix HT ou TTC puis de choisir l'un des taux de TVA suivant :</p>
+        <ul>
+            <li><strong>Taux normal</strong> (20%)</li>
+            <li><strong>Taux intermédiaire</strong> (10%)</li>
+            <li><strong>Taux réduit</strong> (5,5%)</li>
+        </ul>
+        <p>L'utilisateur ne doit pas saisir manuellement le taux de TVA, mais faire un choix entre les 3 taux proposés.</p>
+    </section>
+
 </section>
