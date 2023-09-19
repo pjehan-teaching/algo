@@ -5,11 +5,127 @@
     </section>
 
     <section>
-        <h3>Recherche dichotomique</h3>
+        <h3>Types de boucle</h3>
+        <p>En programmation, une boucle est une structure de contrôle permettant de répéter un bloc d'instructions.</p>
+        <p>En fonction du langage de programmation, il existe plusieurs types de boucles.</p>
+        <p>Algobox ne propose que deux types de boucles :</p>
+        <ul>
+            <li>La boucle <strong><code>Tant que</code></strong> (<code>While</code> en anglais)</li>
+            <li>La boucle <strong><code>Pour</code></strong> (<code>For</code> en anglais)</li>
+        </ul>
+        <p>Certains langages de programmation proposent d'autres types de boucles :</p>
+        <ul>
+            <li>La boucle <code>Faire Tant que</code> (<code>Do While</code> en anglais)</li>
+            <li>La boucle <code>Pour chaque</code> (<code>For Each</code> en anglais)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>La boucle Tant que</h3>
+        <p>La boucle <code>Tant que</code> permet de répéter un bloc d'instructions tant qu'une condition est vraie.</p>
+        <p>La condition est évaluée avant l'exécution du bloc d'instructions (contrairement à la boucle <code>Faire Tant que</code>).</p>
+        <p>Pour créer une boucle <code>Tant que</code> sur AlgoBox, créer une nouvelle ligne puis cliquer sur le bouton suivant :</p>
+        <figure>
+            <img src="assets/images/algobox-while.png" alt="AlgoBox ajouter boucle Tant que">
+            <figcaption>Ajouter une boucle Tant que sur AlgoBox</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>La boucle Tant que</h3>
+        <p>
+            Dans l'exemple ci-dessous, nous utilisons la boucle <code>Tant que</code> pour effectuer un décompte
+            avant de souhaiter la bonne année à l'utilisateur.
+        </p>
+        <div data-alg="assets/files/loop-while.alg"></div>
+        <footer>
+            <a href="#" class="warning" style="font-size: 0.8em">Attention à ne pas oublier de décrémenter la variable dans la boucle !</a>
+        </footer>
     </section>
 
     <section>
         <h3>Exercice - Juste prix</h3>
+        <p>Écrire un algorithme qui demande à l'utilisateur de deviner un nombre compris entre 1 et 10000.</p>
+        <p>L'algorithme indique ensuite à l'utilisateur si le nombre à deviner est plus grand ou plus petit que celui qu'il a saisi.</p>
+        <p>L'algorithme se termine lorsque l'utilisateur a trouvé le nombre à deviner.</p>
+        <p>🏅 BONUS : Afficher le nombre de tentatives à la fin.</p>
+        <p>
+            🏆 SUPER BONUS : Ajouter un chrono pour mesurer le temps écoulé pendant le jeu. Si l'utilisateur dépasse
+            le temps limite de 30 secondes, l'algorithme se termine et affiche un message d'échec
+            (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" target="_blank"><code>performance.now()</code></a> compatible avec Algobox pour vous aider).
+            Si l'utilisateur gagne on affiche le nombre de secondes écoulées.
+        </p>
+    </section>
+
+    <section>
+        <h3>La boucle Pour</h3>
+        <p>La boucle <code>Pour</code> permet de répéter un bloc d'instructions un nombre de fois déterminé.</p>
+        <p>Pour créer une boucle <code>Pour</code> sur AlgoBox, créer une nouvelle ligne puis cliquer sur le bouton suivant :</p>
+        <figure>
+            <img src="assets/images/algobox-for.png" alt="AlgoBox ajouter boucle pour">
+            <figcaption>Ajouter une boucle pour sur AlgoBox</figcaption>
+        </figure>
+        <p>
+            Cette boucle est plus simple à écrire que la boucle <code>Tant que</code> et est <strong>plus adaptée à certains types de traitements</strong>
+            (pour parcourir un tableau notamment).
+        </p>
+    </section>
+
+    <section>
+        <h3>La boucle Pour</h3>
+        <p>L'exemple ci-dessous reprend le même principe que l'exemple précédent avec la boucle <code>Tant que</code>.</p>
+        <p>On remarque que la boucle <code>Pour</code> est <strong>plus simple à écrire et à comprendre</strong>.</p>
+        <div data-alg="assets/files/loop-for.alg"></div>
+        <p>
+            Malheureusement, Algobox <strong>ne permet pas d'effectuer une décrémentation</strong> avec la boucle <code>Pour</code>
+            (ce qui est généralement possible avec les langages de programmations classiques).
+        </p>
+    </section>
+
+    <section>
+        <h3>Exercice - Table de multiplication</h3>
+        <p>Écrire un algorithme qui affiche la table de multiplication d'un nombre.</p>
+        <p>Par exemple, si l'utilisateur saisit le nombre 5 alors l'algorithme affiche :</p>
+        <ul>
+            <li>5 x 1 = 5</li>
+            <li>5 x 2 = 10</li>
+            <li>5 x 3 = 15</li>
+            <li>5 x 4 = 20</li>
+            <li>5 x 5 = 25</li>
+            <li>5 x 6 = 30</li>
+            <li>5 x 7 = 35</li>
+            <li>5 x 8 = 40</li>
+            <li>5 x 9 = 45</li>
+            <li>5 x 10 = 50</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Exercice - Nombre premier</h3>
+        <p>
+            Écrire un algorithme qui demande un nombre à l’utilisateur et indique si ce nombre est premier
+            (c'est-à-dire s'il n’est divisible par aucun nombre entier autre que 1 et lui-même).
+        </p>
+        <figure>
+            <img src="assets/images/prime-numbers.png" alt="Nombres premiers" style="height: 300px;">
+            <figcaption>Nombres naturels de zéro à cent. Les nombres premiers sont marqués en rouge.</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>Exercice - Factorisation</h3>
+        <p>Écrire un algorithme qui demande un nombre à l’utilisateur et affiche sa décomposition en produit de facteurs premiers.</p>
+        <p>Par exemple :</p>
+        <ul>
+            <li>Si l'utilisateur saisit le nombre 6 alors l'algorithme affiche "2 x 3".</li>
+            <li>Si l'utilisateur saisit le nombre 77 alors l'algorithme affiche "7 x 11".</li>
+            <li>Si l'utilisateur saisit le nombre 28068285780721 alors l'algorithme affiche "3202363 x 8764867".</li>
+        </ul>
+        <footer>
+            <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA" target="_blank" class="info" style="font-size: 0.8em;">
+                La complexité de cet algorithme est très importante pour le chiffrement RSA.
+            </a>
+        </footer>
     </section>
 
 </section>

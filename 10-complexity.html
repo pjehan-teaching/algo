@@ -5,7 +5,65 @@
     </section>
 
     <section>
-        <h3>Big O notation</h3>
+        <h2>Complexité conceptuelle et complexité algorithmique</h2>
+        <ul>
+            <li>La <strong>complexité conceptuelle</strong> d'un algorithme est la difficulté à le <strong>comprendre</strong>.</li>
+            <li>La <strong>complexité algorithmique</strong> s'intéresse à l'<strong>efficacité</strong> d'un algorithme.</li>
+            <li>Un algorithme plus efficace peut être plus difficile à comprendre.</li>
+            <li>Il s'agit d'un <strong>compromis</strong> entre la complexité conceptuelle et la complexité algorithmique.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Approximation</h2>
+        <p>Afin de mesurer la complexité algorithmique, on utilise une <strong>approximation</strong> de la complexité.</p>
+        <p>L'objectif sera de mesurer la complexité sans prendre de mesures et sans prendre en compte les performances de notre ordinateur.</p>
+        <p>Nous allons pour cela nous contenter de <strong>compter le nombre d'instructions</strong>.</p>
+    </section>
+
+    <section>
+        <h2>Approximation</h2>
+        <p>Pour effectuer notre approximation, nous partirons donc du principe que toutes les instructions prennent un <strong>temps fixe identique</strong>.</p>
+        <p>Il s'agit d'une approximation, car en réalité, certaines instructions prennent plus de temps que d'autres.</p>
+        <p>Par exemple, une multiplication prend plus de temps qu'une addition.</p>
+    </section>
+
+    <section>
+        <h2>Fonction des entrées</h2>
+        <p>La complexité algorithmique dépend de la <strong>fonction des entrées</strong>.</p>
+        <p>La fonction des entrées est la fonction qui permet de calculer le nombre d'instructions en fonction de la <strong>taille des entrées</strong>.</p>
+        <p>Par exemple, si la fonction des entrées est <code>f(n) = n</code>, alors la complexité algorithmique est linéaire.</p>
+    </section>
+
+    <section>
+        <h2>Loi de Murphy</h2>
+        <p>La <strong>loi de Murphy</strong> nous dit que <strong>tout ce qui peut mal tourner va mal tourner</strong>.</p>
+        <p>En programmation, cela signifie que <strong>le pire des cas</strong> va se produire.</p>
+        <p>Nous allons rechercher le pire des cas afin de mesurer la complexité algorithmique.</p>
+    </section>
+
+    <section>
+        <h2>Complexité temporelle et spatiale</h2>
+        <p>Il existe deux types de complexité algorithmique :</p>
+        <ul>
+            <li>La <strong>complexité temporelle</strong> qui mesure le temps d'exécution d'un algorithme.</li>
+            <li>La <strong>complexité spatiale</strong> qui mesure la mémoire utilisée par un algorithme.</li>
+        </ul>
+        <p>
+            Nous n'allons pas aborder ensemble la complexité spatiale, car celle-ci doit être considérée uniquement
+            si 2 algorithmes ont une complexité temporelle similaire.
+        </p>
+    </section>
+
+    <section>
+        <h3>Big O notation (notation de Landau)</h3>
+        <p>La <strong>Big O notation</strong> est une notation mathématique qui permet de représenter la complexité algorithmique.</p>
+        <p>Elle permet de représenter la complexité algorithmique en fonction de la <strong>taille des entrées</strong> et en considérant le <strong>pire des cas</strong>.</p>
+    </section>
+
+    <section>
+        <h3>Exercice - Nombre premier</h3>
+        <p>Calculer la complexité de l'algorithme écrit précédemment et permettant de déterminer si un nombre est premier.</p>
     </section>
 
 </section>
