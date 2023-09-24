@@ -101,6 +101,25 @@
     </section>
 
     <section>
+        <h3>Portée des variables (scope)</h3>
+        <p>
+            Les variables déclarées dans une fonction sont <strong>locales</strong> à la fonction.
+            Elles ne sont donc pas accessibles en dehors de la fonction.
+        </p>
+        <p>
+            Les variables déclarées en dehors d'une fonction sont <strong>globales</strong> et sont (parfois) accessibles dans toutes les fonctions
+            (c'est le cas en JavaScript, mais pas en PHP par exemple).
+        </p>
+    </section>
+
+    <section>
+        <h3>Portée des variables (scope)</h3>
+        <p>Exemple :</p>
+        <div data-alg="assets/files/function-scope.alg"></div>
+        <p>Ici, l'affichage de la variable locale depuis le programme principal ne fonctionnera pas.</p>
+    </section>
+
+    <section>
         <h3>Passage par valeur/référence</h3>
         <p>
             Lorsqu'une fonction est appelée, les paramètres sont <strong>copiés</strong> dans des variables locales.
@@ -130,6 +149,18 @@
         <footer>
             <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA" target="_blank" class="info" style="font-size: 0.8em;">
                 La complexité de cet algorithme est très importante pour le chiffrement RSA.
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Exercice - Masque de sous-réseau</h3>
+        <p>Créer un programme permettant de retrouver l'adresse du réseau.</p>
+        <p>Le programme doit demander à l'utilisateur de saisir une adresse IP et un masque de sous-réseau.</p>
+        <p>Le programme doit ensuite afficher l'adresse du réseau en additionnant les adresses IP en binaires.</p>
+        <footer>
+            <a href="https://fr.wikipedia.org/wiki/Sous-r%C3%A9seau#Masque_de_sous-r%C3%A9seau" class="info" target="_blank">
+                Page Wikipedia sur les masques de sous-réseau
             </a>
         </footer>
     </section>
