@@ -40,3 +40,13 @@ export function displayForText(text, container) {
 export function displayWhileText(text, container) {
   displayElement(text, 'algobox-while-text', container)
 }
+
+export function displayFunction(name, parameters, container) {
+  displayElement('FONCTION', 'algobox-function', container)
+  displayElement(name, 'algobox-function-name', container);
+  displayElement('(' + parameters + ')', 'algobox-function-parameters', container);
+}
+
+export function displayFunctionText(text, container) {
+  displayElement(text, 'algobox-function-text', container);
+}

@@ -5,21 +5,26 @@ import {
   displayType,
   displayValue,
   displayVariable,
-  displayWhileText
+  displayWhileText,
+  displayFunction, displayFunctionText
 } from './elements';
 import {
   displayInstructionReadVariable,
   displayInstructionDisplayText,
   displayInstructionDisplayVariable,
   displayInstructionCalculation,
-  displayInstructionSetVariable, displayInstructionBreak, displayInstructionComment
+  displayInstructionSetVariable,
+  displayInstructionBreak,
+  displayInstructionComment,
+  displayInstructionReturn,
+  displayInstructionFunctionCall
 } from './instructions';
 
 export function displayFunctionsBlock(node, container) {
   const functionsBlock = document.createElement('div');
   functionsBlock.classList.add('algobox-block-functions');
   for (const child of node.children) {
-
+    displayFunctionBlock(child, functionsBlock);
   }
   container.appendChild(functionsBlock);
 }
@@ -111,6 +116,12 @@ function displayInstructions(node, container) {
       case '20':
         displayInstructionCalculation(child, instruction);
         break;
+      case '205':
+        displayInstructionReturn(child, instruction);
+        break;
+      case '206':
+        displayInstructionFunctionCall(child, instruction);
+        break;
     }
 
     container.appendChild(instruction);
@@ -183,4 +194,21 @@ function displayWhileBlock(node, container) {
   displayInstructions(node, whileBlock);
 
   container.appendChild(whileBlock);
+}
+
+function displayFunctionBlock(node, container) {
+  const functionBlock = document.createElement('div');
+  functionBlock.classList.add('algobox-block-function');
+  const code = node.getAttribute('code');
+  const name = code.split('#')[1];
+  const parameters = code.split('#')[2];
+  displayFunction(name, parameters, functionBlock);
+  displayVariablesBlock(node.children[0], functionBlock);
+  displayFunctionText('DEBUT_FONCTION', functionBlock);
+
+  displayInstructions(node, functionBlock);
+
+  displayFunctionText('FIN_FONCTION', functionBlock);
+
+  container.appendChild(functionBlock);
 }

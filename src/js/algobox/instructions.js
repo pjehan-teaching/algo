@@ -40,3 +40,15 @@ export function displayInstructionCalculation(node, container) {
   displayKeyword(text.shift(), container);
   displayText(text.join(' '), container);
 }
+
+export function displayInstructionReturn(node, container) {
+  const text = node.getAttribute('algoitem').split(' ');
+  displayKeyword(text.shift(), container);
+  displayValue(text.join(' '), container);
+}
+
+export function displayInstructionFunctionCall(node, container) {
+  const text = node.getAttribute('algoitem').split(' ');
+  displayKeyword(text.shift(), container);
+  displayText(text.join(' '), container);
+}

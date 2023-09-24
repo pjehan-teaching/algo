@@ -4,4 +4,152 @@
         <h2>Les fonctions</h2>
     </section>
 
+    <section>
+        <h3>Introduction</h3>
+        <p>Une fonction est un <strong>bloc d'instructions</strong> qui peut être appelé plusieurs fois dans un programme.</p>
+        <p>Les fonctions permettent de <strong>réutiliser</strong> du code et de le rendre plus lisible.</p>
+        <p>Les fonctions peuvent prendre des <strong>paramètres</strong> et <strong>retourner des valeurs</strong>.</p>
+    </section>
+
+    <section>
+        <h3>Démonstration visuelle</h3>
+        <div class="container">
+            <div class="col">
+                <figure>
+                    <img src="assets/images/function-call.gif" alt="Appel d'une fonction" style="height: 60vh;">
+                    <figcaption>Appel d'une fonction</figcaption>
+                </figure>
+            </div>
+            <div class="col">
+                <figure>
+                    <img src="assets/images/function-square.gif" alt="Fonction racine carré">
+                    <figcaption>Fonction racine carré</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Déclarer une fonction</h3>
+        <p>
+            Pour créer une fonction sur Algobox, il faut ajouter une ligne dans le bloc <code>FONCTIONS_UTILISEES</code>
+            puis dans l'ongle <code>Fonctions locales</code>, cliquer sur le bouton suivant :
+        </p>
+        <figure>
+            <img src="assets/images/algobox-add-function.png" alt="AlgoBox ajouter fonction">
+            <figcaption>Ajouter une fonction sur AlgoBox</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>Définir la signature d'une fonction</h3>
+        <p>Ensuite, une fenêtre modale va s'afficher pour saisir le nom de la fonction et ses éventuels paramètres :</p>
+        <figure>
+            <img src="assets/images/algobox-function-signature.png" alt="AlgoBox définir fonction">
+            <figcaption>Définir une fonction sur AlgoBox</figcaption>
+        </figure>
+        <footer>
+            <a href="#" class="info" style="font-size: 0.8em">Malheureusement, Algobox ne permet pas de définir le type des paramètres</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Retouner une valeur</h3>
+        <p>Il faut ensuite écrire les différentes instructions dans la fonction et éventuellement, retourner une valeur.</p>
+        <p>Pour retourner une valeur, il faut cliquer sur le bouton suivant :</p>
+        <figure>
+            <img src="assets/images/algobox-function-return.png" alt="AlgoBox retourner une valeur">
+            <figcaption>Retourner une valeur sur AlgoBox</figcaption>
+        </figure>
+        <p>
+            Lorsqu'une fonction retourne une valeur, <strong>l'exécution du code de la fonction s'arrête</strong>
+            (même si d'autres instructions sont positionnées sous l'instruction <code>RENVOYER</code>).
+        </p>
+    </section>
+
+    <section>
+        <h3>Appeler une fonction</h3>
+        <p>Il est ensuite possible d'appeler une fonction en cliquant sur le bouton suivant :</p>
+        <figure>
+            <img src="assets/images/algobox-function-call.png" alt="AlgoBox appeler une fonction">
+            <figcaption>Appeler une fonction sur AlgoBox</figcaption>
+        </figure>
+        <p>
+            Il est également possible d'appeler une fonction dans les instructions <code>AFFECTER valeur à variable</code>,
+            <code>AFFICHER Variable</code>, <code>AFFICHER Message</code> et <code>AFFICHER Calcul</code>
+        </p>
+    </section>
+
+    <section>
+        <h3>Exemple</h3>
+        <p>Voici un exemple d'algorithme utilisant une fonction permettant d'effectuer une multiplication :</p>
+        <div data-alg="assets/files/function-multiply.alg"></div>
+    </section>
+
+    <section>
+        <h3>Valeur par défaut</h3>
+        <p>
+            Il est possible de définir une <strong>valeur par défaut pour un paramètre</strong>.
+            Ainsi, si le paramètre n'est <strong>pas renseigné</strong> lors de l'appel de la fonction, la valeur par défaut sera utilisée.
+        </p>
+        <p>
+            Pour définir une valeur par défaut, il faut ajouter le signe <code>=</code> suivi de la valeur par défaut
+            après le nom du paramètre.
+        </p>
+        <p>Par exemple :</p>
+        <div data-alg="assets/files/function-default-value.alg"></div>
+    </section>
+
+    <section>
+        <h3>Passage par valeur/référence</h3>
+        <p>
+            Lorsqu'une fonction est appelée, les paramètres sont <strong>copiés</strong> dans des variables locales.
+            Il est donc possible de modifier les paramètres sans modifier les variables passées en paramètres.
+        </p>
+        <p>
+            Pour modifier les variables passées en paramètres, il faut utiliser le passage par référence.
+        </p>
+        <figure>
+            <img src="assets/images/function-parameter-value-ref.gif" alt="Passage par valeur/référence">
+            <figcaption>Passage par valeur/référence</figcaption>
+        </figure>
+        <footer>
+            <a href="#" class="info" style="font-size: 0.8em">Algobox ne permet de passer des variables uniquement par valeur</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Exercice - Factorisation</h3>
+        <p>Écrire un algorithme qui demande un nombre à l'utilisateur et affiche sa décomposition en produit de facteurs premiers.</p>
+        <p>Par exemple :</p>
+        <ul>
+            <li>Si l'utilisateur saisit le nombre 6 alors l'algorithme affiche "2 x 3".</li>
+            <li>Si l'utilisateur saisit le nombre 77 alors l'algorithme affiche "7 x 11".</li>
+            <li>Si l'utilisateur saisit le nombre 28068285780721 alors l'algorithme affiche "3202363 x 8764867".</li>
+        </ul>
+        <footer>
+            <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA" target="_blank" class="info" style="font-size: 0.8em;">
+                La complexité de cet algorithme est très importante pour le chiffrement RSA.
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Exercice - Farkle (simplifié)</h3>
+        <p>Le Farkle est un jeu qui se joue avec 6 dés.</p>
+        <p>Le but du jeu est de marquer le plus de points possible en lançant les dés.</p>
+        <p>À chaque tour, un joueur peut lancer les dés plusieurs fois, mais doit mettre de côté au moins 1 dé à chaque lancé.</p>
+        <p>Si lors d'un lancer, un joueur n'a aucun point, il passe son tour.</p>
+    </section>
+
+    <section>
+        <h3>Exercice - Farkle (simplifié)</h3>
+        <p>Les combinaisons de dés possibles sont les suivantes :</p>
+        <ul>
+            <li>1 : 100 points</li>
+            <li>5 : 50 points</li>
+            <li>3 dés identiques : 100 * valeur du dé sauf la 1 qui vaut 1000 points</li>
+        </ul>
+    </section>
+
 </section>

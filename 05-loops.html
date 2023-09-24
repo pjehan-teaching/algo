@@ -111,7 +111,7 @@
     <section>
         <h3>Exercice - Nombre premier</h3>
         <p>
-            Écrire un algorithme qui demande un nombre à l’utilisateur et indique si ce nombre est premier
+            Écrire un algorithme qui demande un nombre à l'utilisateur et indique si ce nombre est premier
             (c'est-à-dire s'il n'est divisible par aucun nombre entier autre que 1 et lui-même).
         </p>
         <figure>
@@ -121,19 +121,45 @@
     </section>
 
     <section>
-        <h3>Exercice - Factorisation</h3>
-        <p>Écrire un algorithme qui demande un nombre à l'utilisateur et affiche sa décomposition en produit de facteurs premiers.</p>
-        <p>Par exemple :</p>
+        <h3>Exercice - Conjecture de Syracuse</h3>
+        <p>Écrire un algorithme qui demande à l'utilisateur de saisir un nombre.</p>
+        <p>À partir de ce nombre :</p>
         <ul>
-            <li>Si l'utilisateur saisit le nombre 6 alors l'algorithme affiche "2 x 3".</li>
-            <li>Si l'utilisateur saisit le nombre 77 alors l'algorithme affiche "7 x 11".</li>
-            <li>Si l'utilisateur saisit le nombre 28068285780721 alors l'algorithme affiche "3202363 x 8764867".</li>
+            <li>Si le nombre est pair, on le divise par 2</li>
+            <li>Si le nombre est impair, on le multiplie par 3 et on ajoute 1</li>
         </ul>
-        <footer>
-            <a href="https://fr.wikipedia.org/wiki/Chiffrement_RSA" target="_blank" class="info" style="font-size: 0.8em;">
-                La complexité de cet algorithme est très importante pour le chiffrement RSA.
-            </a>
-        </footer>
+        <p>On recommence ce processus jusqu'à obtenir le nombre 1.</p>
+        <p>Par exemple, si l'utilisateur saisit le nombre 13 alors l'algorithme affiche :</p>
+        <p>13 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1</p>
+    </section>
+
+    <section>
+        <h3>Exercice - Code de César</h3>
+        <p>Écrire un algorithme qui demande à l'utilisateur de saisir un message.</p>
+        <p>L'algorithme demande ensuite à l'utilisateur de saisir un nombre.</p>
+        <p>L'algorithme affiche ensuite le message chiffré en utilisant le code de César.</p>
+        <p>Par exemple, si l'utilisateur saisit le message "Bonjour" et le nombre 3 alors l'algorithme affiche : "Erqmrxu"</p>
+        <p>Pour réaliser cet exercice, vous aurez besoin des fonctions suivantes :</p>
+        <ul>
+            <li><code>variable.length</code> : Permet de récupérer la taille d'une chaîne de caractères</li>
+            <li><code>variable.charCodeAt(2)</code> : Permet de récupérer le code ASCII d'un caractère à un index donné</li>
+            <li><code>String.fromCharCode(80)</code> : Permet de récupérer le caractère correspondant à un code ASCII donné</li>
+        </ul>
+        <p>🏅 BONUS : Permettre également de déchiffrer un message.</p>
+    </section>
+
+    <section>
+        <h3>Exercice - Pyramide</h3>
+        <p>Écrire un algorithme qui demande à l'utilisateur de saisir un nombre.</p>
+        <p>L'algorithme affiche ensuite une pyramide de N étages.</p>
+        <p>Par exemple, si l'utilisateur saisit le nombre 5 alors l'algorithme affiche :</p>
+        <pre style="box-shadow: none;">
+            *
+           ***
+          *****
+         *******
+        *********
+        </pre>
     </section>
 
 </section>

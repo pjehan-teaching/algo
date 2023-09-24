@@ -41,6 +41,17 @@ $algobox-color-orange: #DD6F06;
         }
       }
 
+      &-function {
+        @extend .algobox-block;
+
+        .algobox-block-variables {
+          &::before {
+            content: "VARIABLES_FONCTION";
+            color: $algobox-color-brown;
+          }
+        }
+      }
+
       &-variables {
         @extend .algobox-block;
         &::before {
@@ -108,6 +119,16 @@ $algobox-color-orange: #DD6F06;
 
     &-while-text {
       color: $algobox-color-orange;
+    }
+
+    &-function-text {
+      color: $algobox-color-brown;
+    }
+
+    &-function {
+      margin-left: -1rem;
+      margin-right: 0.5em;
+      color: $algobox-color-brown;
     }
 
     &-download {
