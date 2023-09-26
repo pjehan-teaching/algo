@@ -5,8 +5,347 @@
     </section>
 
     <section>
+        <h3>Les différents algorithmes</h3>
+        <p>Il existe de <strong>nombreux algorithmes</strong> de tri ayant chacun des avantages et des inconvénients.</p>
+        <p>
+            Certains algorithmes sont <strong>plus simple</strong> à comprendre, d'autres sont plus adaptés lorsque les
+            données sont <strong>presque triées</strong>, d'autres lorsqu'il y a <strong>beaucoup de données</strong>...
+        </p>
+        <p>
+            Le site internet Toptal
+            <a href="https://www.toptal.com/developers/sorting-algorithms" target="_blank">liste certains de ces algorithmes</a>
+            avec des animations afin de mieux les comprendre.
+        </p>
+    </section>
+
+    <section>
         <h3>Tri à bulles (bubble sort)</h3>
-        <a href="https://www.toptal.com/developers/sorting-algorithms">Animations</a>
+        <p>
+            Le tri à bulles est un algorithme de tri qui consiste à <strong>comparer les éléments deux à deux</strong>
+            et à les <strong>permuter</strong> si besoin.
+        </p>
+        <p>
+            Il va avancer dans le tableau et s'il trouve un élément plus grand que le suivant, il va les permuter et revenir
+            en arrière en faisant des permutations jusqu'à ce que l'élément soit à sa place.
+        </p>
+        <p>
+            Cet algorithme est <strong>lent</strong> et n'est pas adapté pour trier de <strong>grandes quantités de données</strong>.
+        </p>
+        <p>Il est cependant <strong>simple à comprendre</strong> et à mettre en place.</p>
+        <p>Nous allons analyser son fonctionnement en prenant en exemple le tableau suivant :</p>
+        <div class="container" style="align-items: center;">
+            <div class="col">
+                <h4>Tableau de départ</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">➡️</div>
+            <div class="col">
+                <h4>Objectif</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Tri à bulles - Étape 1</h3>
+        <p>L'algorithme va commencer par comparer les valeurs aux index 0 et 1 du tableau.</p>
+        <p>Dans notre exemple, il va donc comparer les valeurs 5 et 3.</p>
+        <p>Comme 5 est plus grand que 3, il va les permuter.</p>
+        <div class="container" style="align-items: center;">
+            <div class="col">
+                <h4>Tableau de départ</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td class="array-current-index">1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td class="array-current-value">5</td>
+                        <td class="array-current-value">3</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">➡️</div>
+            <div class="col">
+                <h4>Étape 1</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td class="array-swap">3</td>
+                        <td class="array-swap">5</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>
+            Le nombre 3 se trouvant maintenant au début du tableau (index 0), l'algorithme va <strong>reprendre là où
+            il s'est arrêté</strong> à l'étape précédente, c'est-à-dire à l'index 1.
+        </p>
+    </section>
+
+    <section>
+        <h3>Tri à bulles - Étape 2</h3>
+        <p>L'algorithme va maintenant comparer les valeurs aux index 1 et 2 du tableau.</p>
+        <p>Dans notre exemple, il va donc comparer les valeurs 5 et 1.</p>
+        <p>Comme 5 est plus grand que 1, il va les permuter.</p>
+        <div class="container" style="align-items: center;">
+            <div class="col">
+                <h4>Étape 1</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td class="array-current-index">2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>3</td>
+                        <td class="array-current-value">5</td>
+                        <td class="array-current-value">1</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">➡️</div>
+            <div class="col">
+                <h4>Étape 2</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>3</td>
+                        <td class="array-swap">1</td>
+                        <td class="array-swap">5</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>
+            Le nombre 1 n'étant <strong>pas au début du tableau</strong>, l'algorithme va
+            <strong>parcourir le tableau en arrière</strong> pour éventuellement permuter des valeurs.
+        </p>
+    </section>
+
+    <section>
+        <h3>Tri à bulles - Étape 3</h3>
+        <p>L'algorithme va maintenant comparer les valeurs aux index 0 et 1 du tableau.</p>
+        <p>Dans notre exemple, il va donc comparer les valeurs 3 et 1.</p>
+        <p>Comme 3 est plus grand que 1, il va les permuter.</p>
+        <div class="container" style="align-items: center;">
+            <div class="col">
+                <h4>Étape 2</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td class="array-current-index">1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td class="array-current-value">3</td>
+                        <td class="array-current-value">1</td>
+                        <td>5</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">➡️</div>
+            <div class="col">
+                <h4>Étape 3</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td class="array-swap">1</td>
+                        <td class="array-swap">3</td>
+                        <td>5</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>
+            Le nombre 1 se trouvant maintenant au début du tableau (index 0), l'algorithme va <strong>reprendre là où
+            il s'est arrêté</strong> à l'étape précédente, c'est-à-dire à l'index 2.
+        </p>
+    </section>
+
+    <section>
+        <h3>Tri à bulles - Étape 4</h3>
+        <p>L'algorithme va maintenant comparer les valeurs aux index 2 et 3 du tableau.</p>
+        <p>Dans notre exemple, il va donc comparer les valeurs 5 et 4.</p>
+        <p>Comme 5 est plus grand que 4, il va les permuter.</p>
+        <div class="container" style="align-items: center;">
+            <div class="col">
+                <h4>Étape 3</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td class="array-current-index">3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>1</td>
+                        <td>3</td>
+                        <td class="array-current-value">5</td>
+                        <td class="array-current-value">4</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">➡️</div>
+            <div class="col">
+                <h4>Étape 4</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>1</td>
+                        <td>3</td>
+                        <td class="array-swap">4</td>
+                        <td class="array-swap">5</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>
+            Le nombre 4 n'étant <strong>pas au début du tableau</strong>, l'algorithme va
+            <strong>parcourir le tableau en arrière</strong> pour éventuellement permuter des valeurs.
+        </p>
+    </section>
+
+    <section>
+        <h3>Tri à bulles - Étape 5</h3>
+        <p>L'algorithme va maintenant comparer les valeurs aux index 1 et 2 du tableau.</p>
+        <p>Dans notre exemple, il va donc comparer les valeurs 3 et 4.</p>
+        <p>Comme 3 est plus petit que 4, il ne va pas les permuter.</p>
+        <div class="container" style="align-items: center;">
+            <div class="col">
+                <h4>Étape 4</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td class="array-current-index">2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>1</td>
+                        <td class="array-current-value">3</td>
+                        <td class="array-current-value">4</td>
+                        <td>5</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">➡️</div>
+            <div class="col">
+                <h4>Étape 5</h4>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>
+            L'algorithme va pouvoir continuer à parcourir le tableau, mais étant donné qu'à l'étape précédente, il
+            était sur le <strong>dernier index du tableau</strong>, cela signifie que le tableau est
+            <strong>maintenant trié</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h3>Exercice - Tri à bulles</h3>
+        <p>
+            En vous aidant des slides précédentes, <strong>écrivez l'algorithme du tri à bulles</strong> avec Algobox.
+        </p>
+        <p>
+            Le programme devra demander à l'utilisateur le nombre d'éléments qu'il souhaite trier, puis les valeurs à
+            insérer dans le tableau.
+        </p>
     </section>
 
 </section>
