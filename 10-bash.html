@@ -1,0 +1,504 @@
+<section id="bash">
+
+    <section>
+        <h2>Bash (pour les sysadmin)</h2>
+    </section>
+
+    <section>
+        <h3>Introduction</h3>
+        <p>
+            Bash (Bourne-Again SHell) est un <strong>langage de script</strong> créé en 1989 qui permet d'automatiser
+            des tâches répétitives sur un système Unix.
+        </p>
+        <p>
+            Il a été créé afin de remplacer le shell Bourne (sh) et d'ajouter de nouvelles fonctionnalités.
+        </p>
+        <p>
+            Bash est un langage de <strong>haut niveau</strong>, ce qui signifie qu'il est plus proche du langage humain
+            que du langage machine.
+        </p>
+        <p>
+            Bash est un langage de programmation <strong>interprété</strong>, c'est-à-dire qu'il est exécuté
+            ligne par ligne par un interpréteur.
+        </p>
+        <p>
+            Sur Windows, vous pouvez utiliser le sous-système Windows pour Linux (WSL) pour exécuter des scripts Bash.
+        </p>
+    </section>
+
+    <section>
+        <h3>Commandes de base</h3>
+        <p>
+            Voici quelques commandes de base en Bash :
+        </p>
+        <ul>
+            <li><code>ls</code> : lister les fichiers et répertoires</li>
+            <li><code>cd</code> : changer de répertoire</li>
+            <li><code>pwd</code> : afficher le répertoire courant</li>
+            <li><code>mkdir</code> : créer un répertoire</li>
+            <li><code>touch</code> : créer un fichier</li>
+            <li><code>rm</code> : supprimer un fichier ou un répertoire</li>
+            <li><code>cp</code> : copier un fichier ou un répertoire</li>
+            <li><code>mv</code> : déplacer un fichier ou un répertoire</li>
+            <li><code>cat</code> : afficher le contenu d'un fichier</li>
+            <li><code>grep</code> : rechercher du texte dans un fichier</li>
+        </ul>
+        <footer>
+            <a href="https://github.com/RehanSaeed/Bash-Cheat-Sheet" class="info" target="_blank">
+                Cheat sheet Bash
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>60 commandes en 10 minutes</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gd7BXuUQ91w?si=RNeK1Im7dDy5Zom9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section>
+        <h3>Hello world</h3>
+        <p>
+            Voici un exemple de script Bash qui affiche "Hello, World!" dans la console :
+        </p>
+        <pre><code class="language-bash">echo "Hello, World!"</code></pre>
+        <p>
+            Pour exécuter ce script, vous pouvez utiliser la commande suivante :
+        </p>
+        <pre><code class="language-bash">bash hello.sh</code></pre>
+        <p>
+            L'instruction <code class="language-bash">echo</code> permet d'afficher du texte dans la console.
+        </p>
+        <p>
+            Chaque instruction en Bash est séparée par un <strong>retour à la ligne</strong> ou bien par un
+            <strong>point-virgule</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h3>Shebang</h3>
+        <p>
+            Le shebang est une instruction qui permet de <strong>spécifier l'interpréteur</strong>
+            à utiliser pour exécuter un script.
+        </p>
+        <p>
+            Voici un exemple de shebang pour spécifier l'interpréteur Bash :
+        </p>
+        <pre><code class="language-bash">#!/bin/bash</code></pre>
+        <p>
+            Vous pouvez ajouter cette ligne en début de script pour spécifier l'interpréteur Bash.
+            Cela permet d'exécuter le script sans avoir à préciser l'interpréteur à chaque fois.
+        </p>
+        <p>
+            Nous pourrions remplacez <code>bash</code> par <code>sh</code> pour utiliser le shell POSIX.
+        </p>
+    </section>
+
+    <section>
+        <h3>Commentaires</h3>
+        <p>
+            Les commentaires permettent d'ajouter des informations dans un script sans que celles-ci ne soient exécutées.
+        </p>
+        <p>
+            Voici un exemple de commentaire en Bash :
+        </p>
+        <pre><code class="language-bash"># Ceci est un commentaire</code></pre>
+    </section>
+
+    <section>
+        <h3>Variables</h3>
+        <p>
+            Les variables permettent de stocker des valeurs dans un script Bash.
+        </p>
+        <p>
+            Voici un exemple de déclaration et d'utilisation de variables en Bash :
+        </p>
+        <pre><code class="language-bash">name="John"
+echo "Hello, $name!"</code></pre>
+        <p>
+            On remarquera également l'utilisation de l'<strong>interpolation</strong> de chaînes de caractères avec
+            les guillemets doubles (<code class="language-bash">"Hello, $name!"</code>).
+        </p>
+        <p>
+            Il est également possible de déclarer des variables de manière explicite en Bash :
+        </p>
+        <pre><code class="language-bash">declare -i age=18</code></pre>
+        <p>
+            Ici, la variable <code class="language-bash">age</code> est déclarée comme un entier avec l'option
+            <code class="language-bash">-i</code>.
+        </p>
+        <footer>
+            <a href="#" class="info">
+                Tapez la commande <code class="language-bash">help declare</code> dans un terminal
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Arguments</h3>
+        <p>
+            Les arguments permettent de passer des valeurs à un script Bash lors de son exécution.
+        </p>
+        <p>
+            Voici un exemple d'utilisation des arguments en Bash :
+        </p>
+        <pre><code class="language-bash">echo "Hello, $1!"</code></pre>
+        <p>
+            Les arguments sont accessibles via les variables <code>$1</code>, <code>$2</code>, <code>$3</code>, etc.
+        </p>
+        <p>
+            Pour exécuter ce script avec un argument, vous pouvez utiliser la commande suivante :
+        </p>
+        <pre><code class="language-bash">bash hello.sh John</code></pre>
+        <footer>
+            <a href="#" class="info">
+                $0 permet de récupérer le nom du script (hello.sh)
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Saisi utilisateur</h3>
+        <p>
+            La commande <code>read</code> permet de récupérer une saisie utilisateur en Bash.
+        </p>
+        <p>
+            Voici un exemple d'utilisation de la commande <code>read</code> en Bash :
+        </p>
+        <pre><code class="language-bash">echo "Quel est votre nom ?"
+read name
+
+echo "Hello, $name!"</code></pre>
+        <p>
+            La commande <code>read</code> permet de stocker la saisie utilisateur dans une variable.
+        </p>
+    </section>
+
+    <section>
+        <h3>Mathématiques</h3>
+        <p>
+            Bash permet d'effectuer des opérations mathématiques en utilisant l'opérateur
+            <code class="language-bash">$((...))</code>.
+        </p>
+        <p>
+            Voici un exemple d'utilisation de l'opérateur <code class="language-bash">$((...))</code> en Bash :
+        </p>
+        <pre><code class="language-bash">echo $((5 + 3))</code></pre>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme permettant d'additionner deux nombres.<br>
+                    Le programme pourra être exécuté de la manière suivante :<br>
+                    <code class="language-bash">bash add.sh 5 3</code>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Pipes</h3>
+        <p>
+            Les pipes permettent de rediriger la sortie d'une commande vers l'entrée d'une autre commande.
+        </p>
+        <p>
+            Il s'agit d'une fonctionnalité très puissante en Bash qui permet de combiner plusieurs commandes.
+        </p>
+        <p>
+            Voici un exemple d'utilisation des pipes en Bash :
+        </p>
+        <pre><code class="language-bash">ls | grep "txt"</code></pre>
+        <p>
+            Ici, la commande <code>ls</code> liste les fichiers et répertoires du répertoire courant et la commande
+            <code>grep</code> permet de rechercher les fichiers avec l'extension <code>txt</code>.
+        </p>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme permettant de rechercher des identifiants (ID) dans un fichier texte.
+                    Les identifiants seront affichés triés par ordre croissant et sans doublons.
+                    <pre><code class="language-bash">bash list-ids.sh ids.txt</code></pre>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Conditions</h3>
+        <p>
+            Les conditions permettent d'exécuter des instructions en fonction d'une expression booléenne.
+        </p>
+        <p>
+            Voici un exemple d'utilisation de conditions en Bash :
+        </p>
+        <pre><code class="language-bash">age=18
+if [ $age -ge 18 ]
+then
+    echo "Vous êtes majeur"
+else
+    echo "Vous êtes mineur"
+fi</code></pre>
+        <p>
+            Les opérateurs de comparaison en Bash sont les suivants :
+        </p>
+        <ul>
+            <li><code>-eq</code> (equal) : égal</li>
+            <li><code>-ne</code> (not equal) : différent</li>
+            <li><code>-gt</code> (greater than) : supérieur</li>
+            <li><code>-lt</code> (less than) : inférieur</li>
+            <li><code>-ge</code> (greater or equal) : supérieur ou égal</li>
+            <li><code>-le</code> (less or equal) : inférieur ou égal</li>
+        </ul>
+        <footer>
+            <a href="https://linuxhandbook.com/bash-test-command/" target="_blank" class="info">
+                Les crochets permettent d'appeler la commande test
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Conditions</h3>
+        <p>
+            Il est également possible de combiner plusieurs conditions en utilisant les opérateurs logiques
+            <code>-a</code> (and) et <code>-o</code> (or).
+        </p>
+        <p>
+            Voici un exemple d'utilisation des opérateurs logiques en Bash :
+        </p>
+        <pre><code class="language-bash">read -p "Quel est votre âge ? " age
+if [ $age -ge 7 -a $age -le 77 ]
+then
+    echo "Elle court, elle court la maladie..."
+fi</code></pre>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme permettant de savoir si un nombre est positif ou négatif.
+                </li>
+                <li>
+                    Écrire un programme permettant de savoir si un nombre est pair ou impair.
+                </li>
+                <li>
+                    Améliorer le programme de calcul précédent pour qu'il puisse additionner, soustraire, multiplier
+                    ou diviser deux nombres.
+                    <pre><code class="language-bash">bash calculator.sh multiply 5 3</code></pre>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Boucles</h3>
+        <p>
+            Les boucles permettent de répéter des instructions un certain nombre de fois ou jusqu'à ce qu'une condition soit remplie.
+        </p>
+        <p>
+            Le langage Bash propose plusieurs types de boucles :
+        </p>
+        <ul>
+            <li><code>for</code> : boucle pour</li>
+            <li><code>while</code> : boucle tant que</li>
+            <li><code>until</code> : boucle jusqu'à</li>
+        </ul>
+        <p>
+            La boucle <code class="language-bash">until</code> n'est pas souvent présente dans les autres
+            langages de programmation et permet de répéter des instructions tant que la condition n'est pas remplie
+            (inverse de la boucle <code class="language-bash">while</code>).
+        </p>
+    </section>
+
+    <section>
+        <h3>Boucles</h3>
+        <p>
+            Voici un exemple d'utilisation des boucles while et for en Bash :
+        </p>
+        <pre><code class="language-bash">i=1
+while [ $i -le 10 ]
+do
+    echo $i
+    i=$((i + 1))
+done
+
+for i in {1..10}
+do
+    echo $i
+done</code></pre>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme permettant d'afficher le message 3, 2, 1 Bonne année !.
+                </li>
+                <li>
+                    Ajouter un temps de pause de 1s entre chaque message.
+                </li>
+                <li>
+                    Écrire un programme permettant de calculer la factorielle d'un nombre.
+                    <pre><code class="language-bash">bash factorial.sh 5</code></pre>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Boucles - Plus ou moins</h3>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme permettant de deviner un nombre entre 1 et 100.
+                    Le programme devra afficher "Plus !" ou "Moins !" en fonction de la proposition de l'utilisateur.
+                    <pre><code class="language-bash">bash guess.sh</code></pre>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Tableaux</h3>
+        <p>
+            Les tableaux permettent de stocker plusieurs valeurs dans une seule variable.
+        </p>
+        <p>
+            Voici un exemple d'utilisation des tableaux en Bash :
+        </p>
+        <pre><code class="language-bash">fruits=("pomme" "banane" "orange")
+echo ${fruits[0]} # pomme
+
+for fruit in ${fruits[@]}
+do
+    echo $fruit
+done</code></pre>
+        <p>
+            Les tableaux en Bash sont <strong>indexés à partir de 0</strong> et peuvent contenir des valeurs de
+            <strong>différents types</strong>.
+        </p>
+        <p>
+            On observera que la boucle <code class="language-bash">for</code> permet de parcourir facilement
+            l'ensemble des éléments d'un tableau. Le symbole <code class="language-bash">@</code> permet de récupérer
+            tous les éléments du tableau.
+        </p>
+    </section>
+
+    <section>
+        <h3>Tableaux associatifs</h3>
+        <p>
+            Les tableaux associatifs permettent de stocker des paires clé-valeur dans une seule variable.
+        </p>
+        <p>
+            Voici un exemple d'utilisation des tableaux associatifs en Bash :
+        </p>
+        <pre><code class="language-bash">declare -A fruits
+fruits=([pomme]="rouge" [banane]="jaune" [orange]="orange")
+echo ${fruits[pomme]} # rouge
+
+for fruit in "${!fruits[@]}"
+do
+    echo "$fruit: ${fruits[$fruit]}"
+done</code></pre>
+        <p>
+            Les tableaux associatifs en Bash sont <strong>indexés par des clés</strong> et peuvent contenir des valeurs
+            de <strong>différents types</strong>.
+        </p>
+        <p>
+            On observera que la boucle <code class="language-bash">for</code> permet de parcourir facilement
+            l'ensemble des éléments d'un tableau associatif. Le symbole <code class="language-bash">!</code> permet de
+            récupérer les clés du tableau associatif et non les valeurs.
+        </p>
+    </section>
+
+    <section>
+        <h3>Tableaux - Manipulation des données</h3>
+        <p>
+            Voici quelques exemples de manipulation des données dans un tableau en Bash :
+        </p>
+        <pre><code class="language-bash">fruits=("pomme" "banane" "orange")
+
+# Ajouter un élément à un tableau
+fruits+=("kiwi")
+
+# Supprimer un élément d'un tableau
+unset fruits[1]
+
+# Supprimer tous les éléments d'un tableau
+unset fruits[*]</code></pre>
+        <p>
+            Il est également possible de trier un tableau en Bash :
+        </p>
+        <pre><code class="language-bash">fruits=("pomme" "banane" "orange")
+sorted=($(echo "${fruits[@]}" | tr ' ' '\n' | sort))
+echo ${sorted[@]}</code></pre>
+        <footer>
+            <a href="https://www.shell-tips.com/bash/arrays/" class="info" target="_blank">
+                Manipulation des tableaux en Bash
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Fonctions</h3>
+        <p>
+            Les fonctions permettent de regrouper des instructions pour les réutiliser plus tard dans un script.
+        </p>
+        <p>
+            Voici un exemple de déclaration et d'utilisation de fonctions en Bash :
+        </p>
+        <pre><code class="language-bash">function hello() {
+    echo "Hello, World!"
+}
+
+hello</code></pre>
+        <p>
+            Il est également possible de passer des arguments à une fonction en Bash :
+        </p>
+        <pre><code class="language-bash">function greet() {
+    echo "Hello, $1!"
+}
+
+greet John</code></pre>
+        <p>
+            On utilise à nouveau <code class="language-bash">$1</code> pour récupérer le premier argument passé à la
+            fonction comme nous l'avons vu précédemment pour les scripts.
+        </p>
+    </section>
+
+    <section>
+        <h3>Exercices - Renommer en masse</h3>
+        <p>
+            Dans cet exercice, nous allons utiliser les commandes Bash pour renommer des fichiers en masse.
+        </p>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme permettant de lister les fichiers d'un répertoire qui sera passé en argument
+                    au script.
+                    <pre><code class="language-bash">bash normalize.sh /path/to/directory</code></pre>
+                </li>
+                <li>
+                    Renommer tous les fichiers d'un répertoire afin d'ajouter la date de création en préfixe au format
+                    <code>YYYY-MM-DD</code>.
+                </li>
+                <li>
+                    Renommer tous les fichiers d'un répertoire afin de remplacer les espaces par des tirets.
+                </li>
+                <li>
+                    Renommer tous les fichiers d'un répertoire afin de remplacer les majuscules par des minuscules.
+                </li>
+            </ol>
+        </div>
+        <footer>
+            <a href="#" class="info" style="font-size: 0.8em">
+                Recherchez sur internet pour trouver les commandes nécessaires.
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Aller plus loin</h3>
+        <p>
+            Si vous souhaitez aller plus loin avec Bash, vous pouvez visionner la série de vidéos suivante (en anglais) :
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=Flgs5UUyBABbxfiF&amp;list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>
+            Vous appendrez entre autres à gérer codes de retour, planifier l'exécution de scripts,
+            utiliser les variables d'environnement...
+        </p>
+    </section>
+
+</section>

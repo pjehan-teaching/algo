@@ -1,0 +1,471 @@
+<section id="python">
+
+    <section>
+        <h2>Python (pour les dev)</h2>
+    </section>
+
+    <section>
+        <h3>Introduction</h3>
+        <p>
+            Il a été créé par Guido van Rossum en 1991 et est aujourd'hui
+            l'<strong>un des langages les plus populaires au monde</strong>.
+        </p>
+        <p>
+            Python est un langage de <strong>haut niveau</strong>, ce qui signifie qu'il est plus proche du
+            langage humain que du langage machine.
+        </p>
+        <p>
+            Python est un langage <strong>multi-paradigme</strong>, ce qui signifie qu'il supporte
+            plusieurs styles de programmation (impératif, orienté objet, fonctionnel...).
+        </p>
+        <p>
+            Python est un langage de programmation <strong>interprété</strong>, c'est-à-dire qu'il est exécuté
+            ligne par ligne par un interpréteur.
+        </p>
+    </section>
+
+    <section>
+        <h3>Installation</h3>
+        <p>Windows :</p>
+        <ul>
+            <li>Installer Scoop : <a href="https://scoop.sh/" target="_blank">https://scoop.sh/</a></li>
+            <li>Installer Python : <code class="language-bash">scoop install python</code></li>
+        </ul>
+        <p>MacOS :</p>
+        <ul>
+            <li>Installer Homebrew : <a href="https://brew.sh/" target="_blank">https://brew.sh/</a></li>
+            <li>Installer Python : <code class="language-bash">brew install python</code></li>
+        </ul>
+        <p>Linux :</p>
+        <ul>
+            <li>Installer Python : <code class="language-bash">sudo apt install python3</code></li>
+        </ul>
+        <p>Pour vérifier que Python est bien installé, vous pouvez utiliser la commande suivante :</p>
+        <pre><code class="language-bash">python --version</code></pre>
+    </section>
+
+    <section>
+        <h3>Hello world</h3>
+        <p>
+            Voici un exemple de programme Python qui affiche "Hello, World!" dans la console :
+        </p>
+        <pre><code class="language-python">print("Hello, World!")</code></pre>
+        <p>
+            Pour executer ce programme, vous pouvez utiliser la commande suivante :
+        </p>
+        <pre><code class="language-bash">python hello.py</code></pre>
+    </section>
+
+    <section>
+        <h3>Variables</h3>
+        <p>
+            En Python, les variables sont <strong>dynamiquement typées</strong>, ce qui signifie que vous n'avez pas
+            besoin de déclarer le type d'une variable avant de l'utiliser.
+        </p>
+        <p>
+            Voici un exemple de déclaration de variables en Python :
+        </p>
+        <pre><code class="language-python">a = 5
+b = "Hello, World!"
+c = 3.14
+
+print(type(b))</code></pre>
+        <footer>
+            <a href="https://docs.python.org/fr/3.10/library/typing.html" target="_blank" class="info">
+                Annotations de type en Python
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Types de données</h3>
+        <p>
+            Python supporte plusieurs types de données :
+        </p>
+        <ul>
+            <li><strong>int</strong> : entier</li>
+            <li><strong>float</strong> : nombre à virgule flottante</li>
+            <li><strong>str</strong> : chaîne de caractères</li>
+            <li><strong>bool</strong> : booléen</li>
+            <li><strong>list</strong> : liste</li>
+            <li><strong>tuple</strong> : tuple</li>
+            <li><strong>set</strong> : ensemble</li>
+            <li><strong>dict</strong> : dictionnaire</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Commentaires</h3>
+        <p>
+            En Python, les commentaires sont précédés du caractère <code>#</code> :
+        </p>
+        <pre><code class="language-python"># Ceci est un commentaire
+print("Hello, World!")</code></pre>
+        <p>
+            Vous pouvez également utiliser des commentaires multilignes en utilisant des triples guillemets :
+        </p>
+        <pre><code class="language-python">"""
+Ceci est un commentaire
+sur plusieurs lignes
+"""
+print("Hello, World!")</code></pre>
+    </section>
+
+    <section>
+        <h3>Saisi utilisateur</h3>
+        <p>
+            Pour demander une saisie à l'utilisateur, vous pouvez utiliser la fonction <code>input()</code> :
+        </p>
+        <pre><code class="language-python">name = input("Quel est votre nom ? ")
+print("Bonjour, " + name)</code></pre>
+        <p>
+            On remarque que la fonction <code class="language-python">input()</code> renvoie toujours une chaîne de
+            caractères et que le caractère <code class="language-python">+</code> permet de concaténer des chaînes de
+            caractères.
+        </p>
+    </section>
+
+    <section>
+        <h3>Conditions</h3>
+        <p>
+            En Python, les conditions sont définies à l'aide des mots-clés <code>if</code>, <code>elif</code> et
+            <code>else</code> :
+        </p>
+        <pre><code class="language-python">age = 18
+
+if age < 18:
+    print("Vous êtes mineur.")
+elif age == 18:
+    print("Vous êtes majeur.")
+else:
+    print("Vous êtes majeur.")</code></pre>
+        <footer>
+            <a href="#" class="warning" style="font-size: 0.7em">
+                Le langage Python utilise l'indentation pour définir les blocs de code (pas d'accolades).
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Conditions</h3>
+        <div class="container">
+            <div class="col" style="flex: 2">
+                <div class="instructions">
+                    <ol>
+                        <li>
+                            Écrire un POC d'un programme en Python permettant de contrôler une maison connectée.
+                        </li>
+                        <li>
+                            Aidez-vous du diagramme d'activité ci-contre pour définir les différentes étapes du programme.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col">
+                <a href="assets/images/activity-domotique.drawio.png" target="_blank">
+                    <img src="assets/images/activity-domotique.drawio.png" alt="Domotique">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Boucles</h3>
+        <p>
+            Il existe deux types de boucles en Python : la boucle <code>while</code> (tant que)
+            et la boucle <code>for</code> (pour).
+        </p>
+        <p>
+            Voici un exemple de boucle <code>while</code> :
+        </p>
+        <pre><code class="language-python">i = 1
+while i < 6:
+    print(i)
+    i += 1</code></pre>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme Python qui affiche "3 2 1 Bonne année !" en utilisant une boucle <code>while</code>.
+                </li>
+                <li>
+                    Ajouter une pause de 1 seconde entre chaque affichage.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Boucles</h3>
+        <p>
+            Voici un exemple de boucle <code>for</code> :
+        </p>
+        <pre><code class="language-python">for(i = 0; i < 5; i++):
+    print(i)</code></pre>
+        <p>
+            En Python, la boucle <code>for</code> est utilisée pour parcourir des collections d'éléments
+            (listes, tuples, sets, dictionnaires...) :
+        </p>
+        <pre><code class="language-python">fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)</code></pre>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme Python qui demande à l'utilisateur de saisir une liste de nombres.
+                </li>
+                <li>
+                    Afficher la somme de ces nombres.
+                </li>
+                <li>
+                    Afficher le plus grand nombre de la liste.
+                </li>
+                <li>
+                    Afficher la moyenne des nombres de la liste.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Fonctions</h3>
+        <p>
+            En Python, les fonctions sont définies à l'aide du mot-clé <code>def</code> :
+        </p>
+        <pre><code class="language-python">def greet(name):
+    print("Hello, " + name)
+
+greet("World")</code></pre>
+    </section>
+
+    <section>
+        <h3>Fonctions</h3>
+        <p>
+            Une fonction peut retourner une valeur à l'aide du mot-clé <code>return</code> :
+        </p>
+        <pre><code class="language-python">def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)</code></pre>
+    </section>
+
+    <section>
+        <h3>Récursivité</h3>
+        <p>
+            La récursivité est une technique de programmation dans laquelle une fonction s'appelle elle-même.
+        </p>
+        <p>
+            Voici un code en Python qui calcule la factorielle d'un nombre en utilisant une boucle while VS la récursivité :
+        </p>
+        <div class="container">
+            <div class="col">
+                <h4>Boucle while</h4>
+        <pre><code class="language-python">num = 5
+fact = 1
+
+while num > 0:
+    fact = fact * num
+    num = num - 1
+
+print(fact)</code></pre>
+            </div>
+            <div class="col">
+                <h4>Récursivité</h4>
+        <pre><code class="language-python">def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Récursivité</h3>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme Python qui va générer automatiquement des fichiers de log.
+                </li>
+                <li>
+                    Le premier fichier de log doit contenir "log1.txt", le deuxième "log2.txt"...
+                </li>
+            </ol>
+        </div>
+        <p>
+            Pour créer un fichier, vous pouvez utiliser la fonction <code>open()</code> :
+        </p>
+        <pre><code class="language-python">import datetime
+
+f = open("log1.txt", "w")
+f.write("Log file created on " + str(datetime.datetime.now()))
+f.close()</code></pre>
+    </section>
+
+    <section>
+        <h3>Collections</h3>
+        <p>
+            En Python, il existe plusieurs types permettant de stocker des collections d'éléments :
+        </p>
+        <ul>
+            <li>
+                <strong>Listes</strong> : collections ordonnées d'éléments
+            </li>
+            <li>
+                <strong>Tuples</strong> : collections ordonnées et immuables d'éléments
+            </li>
+            <li>
+                <strong>Set</strong> : collections non ordonnées d'éléments uniques
+            </li>
+            <li>
+                <strong>Dictionnaires</strong> : collections d'éléments indexés par des clés (key/value pairs)
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Listes</h3>
+        <p>
+            En Python, les listes sont des collections ordonnées d'éléments :
+        </p>
+        <pre><code class="language-python">fruits = ["apple", "banana", "cherry"] # Créer une liste
+fruits[1] = "orange" # Modifier un élément
+fruits.append("pear") # Ajouter un élément
+fruits.remove("banana") # Supprimer un élément
+print(fruits[1]) # Accéder à un élément</code></pre>
+        <footer>
+            <a href="https://docs.python.org/3/tutorial/datastructures.html" class="info" target="_blank">
+                Autres opérations sur les listes
+            </a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Tuples</h3>
+        <p>
+            En Python, les tuples sont des collections ordonnées et immuables d'éléments :
+        </p>
+        <pre><code class="language-python">fruits = ("apple", "banana", "cherry") # Créer un tuple
+print(fruits[1]) # Accéder à un élément</code></pre>
+        <p>
+            Les tuples sont immuables, ce qui signifie qu'une fois qu'ils sont créés, ils ne peuvent pas être modifiés.
+        </p>
+    </section>
+
+    <section>
+        <h3>Set</h3>
+        <p>
+            En Python, les sets sont des collections non ordonnées d'éléments uniques :
+        </p>
+        <pre><code class="language-python">fruits = {"apple", "banana", "cherry"} # Créer un set
+fruits.add("orange") # Ajouter un élément
+fruits.remove("banana") # Supprimer un élément
+fruits.add("apple") # ⚠️ Les éléments en double ne sont pas autorisés !!
+print(fruits)</code></pre>
+    </section>
+
+    <section>
+        <h3>Dictionnaires</h3>
+        <p>
+            En Python, les dictionnaires sont des collections d'éléments indexés par des clés (key/value pairs) :
+        </p>
+        <pre><code class="language-python">person = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+print(person["age"])</code></pre>
+        <p>
+            Un dictionnaire peut contenir des éléments de différents types (int, str, list, dict...). Cela peut
+            permettre de représenter des données complexes :
+        </p>
+        <pre><code class="language-python">person = {
+    "name": "John",
+    "age": 30,
+    "children": [
+        {"name": "Alice", "age": 5},
+        {"name": "Bob", "age": 7}
+    ]
+}</code></pre>
+    </section>
+
+    <section>
+        <h3>Exercice - Arbre généalogique</h3>
+        <pre style="max-height: 200px"><code class="language-python">family = {
+    "name": "John",
+    "age": 98,
+    "children": [
+        {
+            "name": "Alice",
+            "age": 70,
+            "children": [
+                {
+                    "name": "David",
+                    "age": 45,
+                    "children": [
+                        {
+                            "name": "Emma",
+                            "age": 20,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Bob",
+            "age": 65,
+            "children": [
+                {
+                    "name": "Eve",
+                    "age": 30,
+                    "children": []
+                },
+                {
+                    "name": "Grace",
+                    "age": 25,
+                    "children": []
+                }
+            ]
+        }
+    ]
+}</code></pre>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme Python qui affiche l'arbre généalogique de la famille ci-dessus.
+                </li>
+                <li>
+                    Utiliser une fonction récursive pour parcourir l'arbre.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice - Deviner la hauteur</h3>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Écrire un programme Python qui demande à l'utilisateur de deviner la hauteur de la tour Eiffel.
+                </li>
+                <li>
+                    Si la réponse de l'utilisateur est inférieure à 300 mètres, afficher "Trop bas !" sinon afficher
+                    "Trop haut !".
+                </li>
+                <li>
+                    Proposer aléatoirement de deviner la hauteur d'autres monuments célèbres
+                    (Tour de Pise, Empire State...).
+                </li>
+                <li>
+                    Quitter le programme si l'utilisateur saisit "exit".
+                </li>
+            </ol>
+        </div>
+    </section>
+
+
+
+</section>
