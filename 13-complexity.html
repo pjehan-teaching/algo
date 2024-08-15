@@ -59,11 +59,75 @@
         <h3>Big O notation (notation de Landau)</h3>
         <p>La <strong>Big O notation</strong> est une notation mathématique qui permet de représenter la complexité algorithmique.</p>
         <p>Elle permet de représenter la complexité algorithmique en fonction de la <strong>taille des entrées</strong> et en considérant le <strong>pire des cas</strong>.</p>
+        <ul>
+            <li>La complexité d'un algorithme constant est notée <code>O(1)</code>.</li>
+            <li>La complexité d'un algorithme logarithmique est notée <code>O(log n)</code>.</li>
+            <li>La complexité d'un algorithme linéaire est notée <code>O(n)</code>.</li>
+            <li>La complexité d'un algorithme quadratique est notée <code>O(n^2)</code>.</li>
+            <li>La complexité d'un algorithme exponentiel est notée <code>O(2^n)</code>.</li>
+        </ul>
     </section>
 
     <section>
-        <h3>Exercice - Nombre premier</h3>
-        <p>Calculer la complexité de l'algorithme écrit précédemment et permettant de déterminer si un nombre est premier.</p>
+        <h3>Big O notation</h3>
+        <p>
+            Ces complexités peuvent être représentées graphiquement :
+        </p>
+        <figure>
+            <img src="assets/images/complexity-chart.jpg" alt="Graphique de complexité algorithmique">
+            <figcaption>Graphique de complexité algorithmique</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>Exemple - Constante</h3>
+        <p>
+            Un algorithme qui affiche la valeur d'un élément d'un tableau a un index fixe à une complexité constante :
+        </p>
+        <div data-alg="assets/files/complexity-constant.alg"></div>
+    </section>
+
+    <section>
+        <h3>Exemple - Logarithmique</h3>
+        <p>
+            Un algorithme qui affiche la liste des puissances de 2 jusqu'à un nombre donné a une complexité logarithmique :
+        </p>
+        <div data-alg="assets/files/complexity-logarithmic.alg"></div>
+    </section>
+
+    <section>
+        <h3>Exemple - Linéaire</h3>
+        <p>
+            Une simple boucle qui parcourt un tableau de <code>n</code> éléments a une complexité linéaire :
+        </p>
+        <div data-alg="assets/files/complexity-linear.alg"></div>
+    </section>
+
+    <section>
+        <h3>Exemple - Quadratique</h3>
+        <p>
+            Une double boucle qui parcourt un tableau de <code>n</code> éléments a une complexité quadratique :
+        </p>
+        <div data-alg="assets/files/complexity-quadratic.alg"></div>
+    </section>
+
+    <section>
+        <h3>Exemple - Exponentielle</h3>
+        <p>
+            Un algorithme permettant de trouver un mot de passe par la méthode de la force brute (brute force)
+            a une complexité exponentielle :
+        </p>
+        <div data-alg="assets/files/complexity-exponential.alg"></div>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>Quelle est la complexité de l'algorithme de rechercher dichotomique ?</li>
+                <li>Quelle est la complexité de l'algorithme pour recherche un nombre dans la suite de Fibonacci ?</li>
+            </ol>
+        </div>
     </section>
 
 </section>
