@@ -1,0 +1,176 @@
+<section id="past-exams">
+
+    <section>
+        <h2>Examens passés</h2>
+    </section>
+
+    <section>
+        <h3>Source</h3>
+        <p>
+            L'ensemble des énoncés d'examens proviennent du site <a href="https://www.apmep.fr/Annales-BTS">APMEP</a>
+            (Association des Professeurs de Mathématiques de l'Enseignement Public).
+        </p>
+        <p>
+            Les énoncés sont disponibles en <strong>téléchargement au format PDF</strong>.
+            Des <strong>corrigés</strong> sont également disponibles pour chaque énoncé.
+        </p>
+    </section>
+
+    <section>
+        <h3>2024</h3>
+        <p>
+            En considérant l'algorithme ci-dessous écrit en langage naturel où ajoute_bit_parite est la fonction
+            prenant en paramètre <strong>une chaîne de caractères</strong> code de longueur 7 représentant un
+            codage en binaire et qui renvoie le codage obtenu en lui ajoutant le bit de parité à la fin. Ainsi,
+            ajoute_bit_parite("1101100") renvoie "110110010" et ajoute_bit_parite("1100001") renvoie "11000011".
+        </p>
+        <pre><code><b>Fonction</b> ajoute_bit_parite(code)
+    compt ← 0
+    <b>Pour</b> i allant de 0 à 6 Faire
+        <b>Si</b> code[i] est égal à "1"
+        <b>Alors</b>
+            ....................
+        <b>Fin de si</b>
+    <b>Fin de Pour</b>
+    <b>Si</b> le reste de la division de ....... par 2 est 0
+    <b>Alors</b>
+        code ← code + "0"
+    <b>Sinon</b>
+        code ← code + "1"
+    <b>Fin si</b>
+    Renvoyer code</code></pre>
+        <a href="assets/files/bts-sio-2024.pdf">
+            Télécharger l'épreuve complète
+        </a>
+    </section>
+
+    <section>
+        <h3>2023</h3>
+        <p>
+            On étudie dans cette question les graphes orientés à trois sommets numérotés de 1 à 3.
+            On considère l’algorithme ci-dessous écrit en langage naturel où Degré_sortant désigne une fonction de
+            paramètres <i>M</i> et <i>s</i>, <i>M</i> étant une matrice à 3 lignes et 3 colonnes et s un entier compris entre 1 et 3.
+            Le coefficient de la matrice <i>M</i> situé ligne <i>i</i> colonne <i>j</i> est noté m<sub>ij</sub> .
+        </p>
+        <pre><code><b>Fonction</b> Degré_sortant (M,s)
+    deg ← 0
+    Pour j allant de 1 à 3 <b>Faire</b>
+        <b>Si</b> m<sub>sj</sub> ...... <b>Faire</b>
+            ......
+        <b>Fin de Si</b>
+    <b>Fin de Pour</b>
+    <b>Retourner</b> deg</code></pre>
+        <a href="assets/files/bts-sio-2023.pdf">
+            Télécharger l'épreuve complète
+        </a>
+    </section>
+
+    <section>
+        <h3>2022</h3>
+        <p>
+            On considère l’algorithme ci-dessous écrit en langage naturel où Div désigne une fonction de paramètre Nbre,
+            Nbre étant un nombre entier supérieur ou égal à 2.
+        </p>
+        <pre><code><b>Fonction</b> Div(Nbre)
+    Test ← 0
+    <b>Pour</b> i allant de 1 à Nbre <b>Faire</b>
+        <b>Si</b> le reste de la division de Nbre par i est égal à 0 <b>Faire</b>
+            Test ← Test + 1
+        <b>Fin de Si</b>
+    <b>Fin de Pour</b>
+    Retourner Test</code></pre>
+        <ol type="a">
+            <li>
+                Que renvoie Div(6) ? Justifier en expliquant le rôle de cette fonction.
+            </li>
+            <li>
+                Écrire une fonction Prem de paramètre Nbre, où Nbre est un nombre entier supérieur ou égal à 2, qui
+                renvoie Vrai (ou True) si Nbre est premier, Faux (ou False) si Nbre n’est pas premier.<br>
+                On pourra utiliser la fonction Div.
+            </li>
+        </ol>
+        <a href="assets/files/bts-sio-2022.pdf">
+            Télécharger l'épreuve complète
+        </a>
+    </section>
+
+    <section>
+        <h3>2021</h3>
+        <p>
+            L'épreuve de mathématiques de l'examen du BTS SIO 2021 ne comportait pas d'algorithmique.
+        </p>
+        <a href="assets/files/bts-sio-2021.pdf">
+            Télécharger l'épreuve complète
+        </a>
+    </section>
+
+    <section>
+        <h3>2020</h3>
+        <p>
+            On considère l’algorithme ci-dessous écrit en langage naturel où Diviseurs est une fonction de paramètre Nbre,
+            Nbre étant un nombre entier supérieur ou égal à 2.
+        </p>
+    </section>
+
+    <section>
+        <h3>Autre exercice - Palindrome</h3>
+        <p>
+            On considère l’algorithme ci-dessous écrit en langage naturel où <code>inverse_chaine</code> est une fonction
+            de paramètre <code>chaine</code>, <code>chaine</code> étant une chaîne de caractères. Cette fonction renvoie
+            la chaîne obtenue en inversant l'ordre des caractères de la chaîne <code>chaine</code>.
+        </p>
+        <pre><code><b>Fonction</b> inverse_chaine(chaine)
+    inverse ← .........
+    <b>Pour</b> i allant de longueur(chaine) à 1 <b>Faire</b>
+        inverse ← .......... + chaine[i]
+    <b>Fin de Pour</b>
+    <b>Retourner</b> inverse</code></pre>
+        <ol type="a">
+            <li>
+                Completer l'algorithme ci-dessus.
+            </li>
+            <li>
+                Que renvoie <code>inverse_chaine("bonjour")</code> ?
+            </li>
+            <li>
+                Écrire une fonction <code>est_palindrome</code> de paramètre <code>chaine</code>, <code>chaine</code> étant
+                une chaîne de caractères, qui renvoie <code>Vrai</code> (ou <code>True</code>) si la chaîne <code>chaine</code>
+                est un palindrome, <code>Faux</code> (ou <code>False</code>) sinon. Vous pourrez utiliser la fonction
+                <code>inverse_chaine</code>.
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h3>Autre exercice - Liste sans duplication</h3>
+        <p>
+            On considère l’algorithme ci-dessous écrit en langage naturel où <code>est_dans_liste</code> est une fonction
+            de paramètres <code>liste</code> et <code>element</code>, <code>liste</code> étant une liste d'entiers et
+            <code>element</code> un entier. Cette fonction renvoie <code>Vrai</code> (ou <code>True</code>) si l'entier
+            <code>element</code> est présent dans la liste <code>liste</code>, <code>Faux</code> (ou <code>False</code>)
+            sinon.
+        </p>
+        <pre><code><b>Fonction</b> est_dans_liste(liste, element)
+    dans_liste ← .......
+    <b>Pour</b> i allant de 1 à longueur(liste) <b>Faire</b>
+        <b>Si</b> liste[i] est égal à ....... <b>Alors</b>
+            dans_liste ← Vrai
+        <b>Fin de Si</b>
+    <b>Fin de Pour</b>
+    <b>Retourner</b> dans_liste</code></pre>
+        <ol type="a">
+            <li>
+                Completer l'algorithme ci-dessus.
+            </li>
+            <li>
+                Réécrire l'algorithme ci-dessus en supprimant la variable <code>dans_liste</code>.
+            </li>
+            <li>
+                Écrire une fonction <code>liste_sans_duplication</code> de paramètre <code>liste</code>, <code>liste</code>
+                étant une liste d'entiers, qui renvoie une nouvelle liste contenant les mêmes éléments que la liste
+                <code>liste</code> mais sans duplication. Vous pourrez utiliser la fonction <code>est_dans_liste</code>.
+            </li>
+        </ol>
+    </section>
+
+</section>
