@@ -1,0 +1,280 @@
+<section id="other-algorithms">
+
+    <section>
+        <h2>Autres Algorithmes</h2>
+    </section>
+
+    <section>
+        <h3>Depth-First Search (DFS)</h3>
+        <p>
+            La recherche en profondeur (ou parcours en profondeur) est un algorithme de parcours d'un graphe. Il explore
+            chaque branche d'un graphe aussi loin que possible avant de revenir en arrière.
+        </p>
+        <p>
+            L'algorithme consiste à visiter un sommet, puis à visiter récursivement tous les sommets voisins de ce sommet.
+        </p>
+    </section>
+
+    <section>
+        <h3>Depth-First Search (DFS)</h3>
+        <img src="assets/images/dfs.gif" alt="DFS">
+    </section>
+
+    <section>
+        <h3>LIFO / Stack (pile)</h3>
+        <p>
+            LIFO (Last In First Out) est une structure de données qui permet de stocker des éléments dans un ordre
+            particulier. Les éléments sont ajoutés et retirés dans le même ordre.
+        </p>
+        <p>
+            Cette structure est utilisée pour implémenter la recherche en profondeur (DFS).
+        </p>
+    </section>
+
+    <section>
+        <h3>Fonctionnement</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/dfs.gif" alt="DFS">
+            </div>
+            <div class="col">
+                <ol>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 1</li>
+                            <li>Stack : 9, 5, 2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 2</li>
+                            <li>Stack : 9, 5, 3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 3</li>
+                            <li>Stack : 9, 5, 4</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 4</li>
+                            <li>Stack : 9, 5</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 5</li>
+                            <li>Stack : 9, 8, 6</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 6</li>
+                            <li>Stack : 9, 8, 7</li>
+                        </ul>
+                    </li>
+                    <li>...</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Utilisez l'algorithme de recherche en profondeur pour trouver un chemin entre le sommet de départ et
+                    le sommet d'arrivée dans un labyrinthee.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Breadth-First Search (BFS)</h3>
+        <p>
+            La recherche en largeur (ou parcours en largeur) est un algorithme de parcours d'un graphe. Il explore tous
+            les sommets voisins d'un sommet avant de passer au sommet suivant.
+        </p>
+        <p>
+            L'algorithme consiste à visiter un sommet, puis à visiter tous les sommets voisins de ce sommet, puis à
+            visiter tous les sommets voisins des sommets voisins, et ainsi de suite.
+        </p>
+    </section>
+
+    <section>
+        <h3>Breadth-First Search (BFS)</h3>
+        <img src="assets/images/bfs.gif" alt="BFS">
+    </section>
+
+    <section>
+        <h3>FIFO / Queue (file)</h3>
+        <p>
+            FIFO (First In First Out) est une structure de données qui permet de stocker des éléments dans un ordre
+            particulier. Les éléments sont ajoutés à la fin de la file et retirés au début de la file.
+        </p>
+        <p>
+            Cette structure est utilisée pour implémenter la recherche en largeur (BFS).
+        </p>
+    </section>
+
+    <section>
+        <h3>Fonctionnement</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/bfs.gif" alt="BFS">
+            </div>
+            <div class="col">
+                <ol>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 1</li>
+                            <li>Queue : 2, 3, 4</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 2</li>
+                            <li>Queue : 3, 4, 5</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 3</li>
+                            <li>Queue : 4, 5, 6, 7</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 4</li>
+                            <li>Queue : 5, 6, 7, 8</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 5</li>
+                            <li>Queue : 6, 7, 8, 9</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Node actuel : 6</li>
+                            <li>Queue : 7, 8, 9, 10</li>
+                        </ul>
+                    </li>
+                    <li>...</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Modifiez l'algorithme de recherche d'un chemin dans un labyrinthe pour utiliser la recherche en
+                    largeur.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Greedy Breadth-First Search (GBFS)</h3>
+        <p>
+            La recherche gloutonne en largeur (ou parcours glouton en largeur) est un algorithme de parcours d'un graphe.
+            Il explore tous les sommets voisins d'un sommet en choisissant le <strong>sommet le plus prometteur</strong>
+            à chaque étape.
+        </p>
+        <p>
+            L'algorithme consiste à visiter un sommet, puis à visiter le sommet voisin le plus prometteur, puis à visiter
+            le sommet voisin le plus prometteur des sommets voisins, et ainsi de suite.
+        </p>
+        <p>
+            Afin de choisir le sommet le plus prometteur, l'algorithme utilise une <strong>fonction heuristique</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h3>Fonction heuristique</h3>
+        <p>
+            Une fonction heuristique est une fonction qui estime la distance entre un sommet de départ et un sommet
+            d'arrivée dans un graphe. Elle est utilisée pour guider la recherche d'un chemin optimal entre les deux
+            sommets.
+        </p>
+        <p>
+            La <strong>distance de Manhattan</strong> est une mesure de la distance entre deux points dans un espace
+            euclidien. Elle est définie comme la somme des différences absolues des coordonnées des deux points.
+        </p>
+        <p>
+            Cette méthode peut être utilisée pour estimer la distance entre un sommet de départ et un sommet d'arrivée
+            dans un graphe.
+        </p>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Modifiez l'algorithme de recherche d'un chemin dans un labyrinthe pour utiliser la recherche gloutonne
+                    en largeur.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>A* Search Algorithm</h3>
+        <p>
+            L'algorithme A* est un algorithme de recherche de chemin dans un graphe. Il utilise une fonction d'évaluation
+            pour estimer le coût d'un chemin entre un sommet de départ et un sommet d'arrivée.
+        </p>
+        <p>
+            L'algorithme consiste à visiter les sommets voisins du sommet de départ en choisissant le sommet le plus
+            prometteur en fonction de la fonction d'évaluation, puis à visiter les sommets voisins des sommets voisins en
+            choisissant le sommet le plus prometteur, et ainsi de suite.
+        </p>
+    </section>
+
+    <section>
+        <h3>Fonction d'évaluation</h3>
+        <p>
+            La fonction d'évaluation est une fonction qui estime le coût d'un chemin entre un sommet de départ et un
+            sommet d'arrivée dans un graphe. Elle est utilisée pour guider la recherche d'un chemin optimal entre les
+            deux sommets.
+        </p>
+        <p>
+            La fonction d'évaluation est définie comme la somme du coût du chemin parcouru jusqu'à présent et de la
+            distance estimée entre le sommet actuel et le sommet d'arrivée.
+        </p>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Modifiez l'algorithme de recherche d'un chemin dans un labyrinthe pour utiliser l'algorithme A*.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Minimax</h3>
+        <p>
+            L'algorithme Minimax est un algorithme de recherche de décision dans un arbre de jeu. Il explore tous les
+            coups possibles d'un joueur et de son adversaire pour déterminer le meilleur coup à jouer.
+        </p>
+        <p>
+            L'algorithme consiste à évaluer chaque coup possible en fonction de la probabilité de succès, puis à choisir
+            le coup qui maximise les chances de succès du joueur et minimise les chances de succès de l'adversaire.
+        </p>
+    </section>
+
+</section>
