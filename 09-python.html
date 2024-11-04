@@ -78,6 +78,19 @@ print(type(b))</code></pre>
     </section>
 
     <section>
+        <h3>Typehint</h3>
+        <p>
+            Depuis Python 3.5, il est possible d'ajouter des annotations de type aux fonctions et aux variables :
+        </p>
+        <pre><code class="language-python">def add(a: int, b: int) -> int: # La fonction add prend deux entiers en paramètre et retourne un entier
+    return a + b</code></pre>
+        <p>
+            Attention ! Les annotations de type ne sont <strong>pas vérifiées par l'interpréteur Python</strong>, elles
+            sont simplement là pour documenter le code.
+        </p>
+    </section>
+
+    <section>
         <h3>Types de données</h3>
         <p>
             Python supporte plusieurs types de données :
@@ -116,7 +129,7 @@ print("Hello, World!")</code></pre>
         <p>
             Pour demander une saisie à l'utilisateur, vous pouvez utiliser la fonction <code>input()</code> :
         </p>
-        <pre><code class="language-python">name = input("Quel est votre nom ? ")
+        <pre><code class="language-python">name: str = input("Quel est votre nom ? ")
 print("Bonjour, " + name)</code></pre>
         <p>
             On remarque que la fonction <code class="language-python">input()</code> renvoie toujours une chaîne de
@@ -126,12 +139,28 @@ print("Bonjour, " + name)</code></pre>
     </section>
 
     <section>
+        <h3>Saisi utilisateur - Conversion de type</h3>
+        <p>
+            Pour convertir une chaîne de caractères en un autre type de données, vous pouvez utiliser les fonctions
+            suivantes :
+        </p>
+        <ul>
+            <li><code class="language-python">int()</code> : convertit une chaîne de caractères en un entier</li>
+            <li><code class="language-python">float()</code> : convertit une chaîne de caractères en un nombre à virgule flottante</li>
+            <li><code class="language-python">str()</code> : convertit un entier ou un nombre à virgule flottante en une chaîne de caractères</li>
+        </ul>
+        <pre><code class="language-python">age: int = int(input("Quel est votre âge ? "))
+age += 1
+print("Vous aurez " + str(age) + " ans l'année prochaine.")</code></pre>
+    </section>
+
+    <section>
         <h3>Conditions</h3>
         <p>
             En Python, les conditions sont définies à l'aide des mots-clés <code>if</code>, <code>elif</code> et
             <code>else</code> :
         </p>
-        <pre><code class="language-python">age = 18
+        <pre><code class="language-python">age: int = 18
 
 if age < 18:
     print("Vous êtes mineur.")
@@ -178,7 +207,7 @@ else:
         <p>
             Voici un exemple de boucle <code>while</code> :
         </p>
-        <pre><code class="language-python">i = 1
+        <pre><code class="language-python">i: int = 1
 while i < 6:
     print(i)
     i += 1</code></pre>
@@ -205,7 +234,7 @@ while i < 6:
             En Python, la boucle <code>for</code> est utilisée pour parcourir des collections d'éléments
             (listes, tuples, sets, dictionnaires...) :
         </p>
-        <pre><code class="language-python">fruits = ["apple", "banana", "cherry"]
+        <pre><code class="language-python">fruits: list[str] = ["apple", "banana", "cherry"] # list[str] signifie que la liste contient des chaînes de caractères
 for fruit in fruits:
     print(fruit)</code></pre>
         <div class="instructions">
@@ -231,7 +260,7 @@ for fruit in fruits:
         <p>
             En Python, les fonctions sont définies à l'aide du mot-clé <code>def</code> :
         </p>
-        <pre><code class="language-python">def greet(name):
+        <pre><code class="language-python">def greet(name: str) -> None:
     print("Hello, " + name)
 
 greet("World")</code></pre>
@@ -242,10 +271,10 @@ greet("World")</code></pre>
         <p>
             Une fonction peut retourner une valeur à l'aide du mot-clé <code>return</code> :
         </p>
-        <pre><code class="language-python">def add(a, b):
+        <pre><code class="language-python">def add(a: int, b: int) -> int:
     return a + b
 
-result = add(5, 3)
+result: int = add(5, 3)
 print(result)</code></pre>
     </section>
 
@@ -260,8 +289,8 @@ print(result)</code></pre>
         <div class="container">
             <div class="col">
                 <h4>Boucle while</h4>
-        <pre><code class="language-python">num = 5
-fact = 1
+        <pre><code class="language-python">num: int = 5
+fact: int = 1
 
 while num > 0:
     fact = fact * num
@@ -271,7 +300,7 @@ print(fact)</code></pre>
             </div>
             <div class="col">
                 <h4>Récursivité</h4>
-        <pre><code class="language-python">def factorial(n):
+        <pre><code class="language-python">def factorial(n: int):
     if n == 0:
         return 1
     else:
@@ -290,7 +319,11 @@ print(factorial(5))</code></pre>
                     Écrire un programme Python qui va générer automatiquement des fichiers de log.
                 </li>
                 <li>
-                    Le premier fichier de log doit contenir "log1.txt", le deuxième "log2.txt"...
+                    Le premier fichier de log doit s'appeler "log.txt", le deuxième "log_1.txt", "log_2.txt"...
+                    jusqu'à log_10.txt.
+                </li>
+                <li>
+                    Essayer de gérer les générations de fichier après log_10.txt.
                 </li>
             </ol>
         </div>
@@ -298,10 +331,16 @@ print(factorial(5))</code></pre>
             Pour créer un fichier, vous pouvez utiliser la fonction <code>open()</code> :
         </p>
         <pre><code class="language-python">import datetime
+import typing
 
-f = open("log1.txt", "w")
+f: typing.TextIO = open("log.txt", "w")
 f.write("Log file created on " + str(datetime.datetime.now()))
 f.close()</code></pre>
+        <p>
+            Vous aurez également besoin de la librairie <code class="language-python">os</code>
+            pour lister les fichiers d'un répertoire, vérifier si un fichier existe et extraire l'extension du
+            nom de fichier.
+        </p>
     </section>
 
     <section>
@@ -330,10 +369,10 @@ f.close()</code></pre>
         <p>
             En Python, les listes sont des collections ordonnées d'éléments :
         </p>
-        <pre><code class="language-python">fruits = ["apple", "banana", "cherry"] # Créer une liste
+        <pre><code class="language-python">fruits: list[str] = ["apple", "banana", "cherry"] # Créer une liste
 fruits[1] = "orange" # Modifier un élément
 fruits.append("pear") # Ajouter un élément
-fruits.remove("banana") # Supprimer un élément
+fruits.remove("cherry") # Supprimer un élément
 print(fruits[1]) # Accéder à un élément</code></pre>
         <footer>
             <a href="https://docs.python.org/3/tutorial/datastructures.html" class="info" target="_blank">
@@ -347,7 +386,7 @@ print(fruits[1]) # Accéder à un élément</code></pre>
         <p>
             En Python, les tuples sont des collections ordonnées et immuables d'éléments :
         </p>
-        <pre><code class="language-python">fruits = ("apple", "banana", "cherry") # Créer un tuple
+        <pre><code class="language-python">fruits: list[str] = ("apple", "banana", "cherry") # Créer un tuple
 print(fruits[1]) # Accéder à un élément</code></pre>
         <p>
             Les tuples sont immuables, ce qui signifie qu'une fois qu'ils sont créés, ils ne peuvent pas être modifiés.
@@ -359,7 +398,7 @@ print(fruits[1]) # Accéder à un élément</code></pre>
         <p>
             En Python, les sets sont des collections non ordonnées d'éléments uniques :
         </p>
-        <pre><code class="language-python">fruits = {"apple", "banana", "cherry"} # Créer un set
+        <pre><code class="language-python">fruits: list[str] = {"apple", "banana", "cherry"} # Créer un set
 fruits.add("orange") # Ajouter un élément
 fruits.remove("banana") # Supprimer un élément
 fruits.add("apple") # ⚠️ Les éléments en double ne sont pas autorisés !!
