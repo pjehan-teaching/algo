@@ -17,7 +17,39 @@
     </section>
 
     <section>
-        <h3>2025</h3>
+        <h3>2025 (partie 1)</h3>
+        <p>
+            Pour calculer le reste de la division euclidienne d’un entier N par 26, il suffit de soustraire 26 à N
+            autant de fois que possible, c’est-à-dire tant que la différence demeure supérieure ou égale à 26.
+        </p>
+        <pre><code><b>Fonction</b> reste_division_par_26(N)
+    <b>Tant que</b> N ... <b>Faire</b>
+        N ← ...
+    <b>Fin de Tant que</b>
+    <b>Renvoyer</b> (N)
+<b>Fin de la fonction</b></code></pre>
+        <a href="assets/files/bts-sio-2025.pdf">
+            Télécharger l'épreuve complète
+        </a>
+    </section>
+
+    <section>
+        <h3>2025 (partie 2)</h3>
+        <p>
+            La fonction <code>indice (lettre, chaine)</code> ci-dessous, renvoie le plus petit indice du
+            caractère « lettre » dans la chaîne de caractères « chaine », lorsqu’il est présent dans
+            « chaine », et elle renvoie le nombre de caractères de « chaine » sinon.
+        </p>
+        <p>
+            Exemple : indice("S", "BTSSIO") renvoie la valeur 2, le plus petit indice de "S" dans "BTSSIO".
+        </p>
+        <pre><code><b>Fonction</b> indice (lettre, chaine)
+    k ← 0
+    <b>Tant que</b> ... longueur(chaine) et lettre ... <b>Faire</b>
+        k ← k + 1
+    <b>Fin de Tant que</b>
+    <b>Renvoyer</b> (k)
+<b>Fin de la fonction</b></code></pre>
         <a href="assets/files/bts-sio-2025.pdf">
             Télécharger l'épreuve complète
         </a>
