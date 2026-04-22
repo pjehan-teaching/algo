@@ -103,6 +103,79 @@
     </section>
 
     <section>
+        <h3>Softmax</h3>
+        <p>
+            L'algorithme <strong>Softmax</strong> est une fonction mathématique qui convertit un tableau de nombres réels
+            en un tableau de <strong>probabilités</strong> dont la somme vaut 1.
+        </p>
+        <p>
+            Pour chaque valeur <em>x<sub>i</sub></em> du tableau, la formule est la suivante :
+        </p>
+        <p style="text-align: center; font-size: 1.2em;">
+            <em>softmax(x<sub>i</sub>) = e<sup>x<sub>i</sub></sup> / &sum; e<sup>x<sub>j</sub></sup></em>
+        </p>
+        <p>
+            Il faut donc calculer l'exponentielle de chaque valeur du tableau,
+            puis diviser chaque exponentielle par la somme de toutes les exponentielles pour obtenir les probabilités.
+        </p>
+        <p>
+            Cet algorithme est notamment utilisé dans les <strong>LLM (Large Language Models)</strong> au sein de la
+            <strong>couche d'attention</strong> (<em>attention layer</em>) pour transformer les scores bruts (logits)
+            en distributions de probabilités, permettant au modèle de décider à quels tokens accorder le plus d'importance.
+        </p>
+    </section>
+
+    <section>
+        <h3>Exercice : Softmax</h3>
+        <div class="instructions">
+            <ol>
+                <li>
+                    Créez une fonction <code>softmax</code> qui prend en paramètre un tableau de nombres et retourne
+                    un nouveau tableau contenant les probabilités calculées par l'algorithme Softmax.
+                </li>
+                <li>
+                    Testez votre fonction avec le tableau suivant : <code>[2.0, 1.0, 0.1]</code>.
+                    Le résultat attendu est approximativement <code>[0.659, 0.242, 0.099]</code>.
+                </li>
+                <li>
+                    Vérifiez que la somme de toutes les valeurs du tableau résultant est bien égale à 1.
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Bonus : La température dans les LLM</h3>
+        <p>
+            La <strong>température</strong> est un paramètre qui influence la <strong>distribution des probabilités</strong>
+            calculée par Softmax lors de la génération de texte dans un LLM.
+        </p>
+        <p>
+            Elle s'applique en divisant chaque logit par la valeur de température <em>T</em> avant de passer dans Softmax :
+        </p>
+        <p style="text-align: center; font-size: 1.2em;">
+            <em>softmax(x<sub>i</sub> / T)</em>
+        </p>
+        <ul>
+            <li>
+                <strong>T &lt; 1</strong> : la distribution devient plus <strong>concentrée</strong> (le modèle est plus
+                déterministe et choisit les tokens les plus probables).
+            </li>
+            <li>
+                <strong>T = 1</strong> : comportement par défaut, aucune modification de la distribution.
+            </li>
+            <li>
+                <strong>T &gt; 1</strong> : la distribution devient plus <strong>uniforme</strong> (le modèle est plus
+                créatif et explore davantage de tokens moins probables).
+            </li>
+        </ul>
+        <p>
+            En pratique, une température basse produit des réponses <strong>précises et répétables</strong>, tandis
+            qu'une température haute génère des réponses plus <strong>variées et créatives</strong>.
+        </p>
+    </section>
+
+    <section>
         <h3>Exercice - Blackjack</h3>
         <p>Écrire un algorithme qui simule une partie de blackjack qui se joue avec des dés.</p>
         <p>L'algorithme commence par demander le nombre de joueurs.</p>
