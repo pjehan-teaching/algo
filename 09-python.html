@@ -386,7 +386,7 @@ print(fruits[1]) # Accéder à un élément</code></pre>
         <p>
             En Python, les tuples sont des collections ordonnées et immuables d'éléments :
         </p>
-        <pre><code class="language-python">fruits: list[str] = ("apple", "banana", "cherry") # Créer un tuple
+        <pre><code class="language-python">fruits: tuple[str, ...] = ("apple", "banana", "cherry") # Créer un tuple
 print(fruits[1]) # Accéder à un élément</code></pre>
         <p>
             Les tuples sont immuables, ce qui signifie qu'une fois qu'ils sont créés, ils ne peuvent pas être modifiés.
@@ -398,7 +398,7 @@ print(fruits[1]) # Accéder à un élément</code></pre>
         <p>
             En Python, les sets sont des collections non ordonnées d'éléments uniques :
         </p>
-        <pre><code class="language-python">fruits: list[str] = {"apple", "banana", "cherry"} # Créer un set
+        <pre><code class="language-python">fruits: set[str] = {"apple", "banana", "cherry"} # Créer un set
 fruits.add("orange") # Ajouter un élément
 fruits.remove("banana") # Supprimer un élément
 fruits.add("apple") # ⚠️ Les éléments en double ne sont pas autorisés !!
