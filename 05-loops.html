@@ -8,7 +8,7 @@
         <h3>Types de boucle</h3>
         <p>En programmation, une boucle est une structure de contrôle permettant de répéter un bloc d'instructions.</p>
         <p>En fonction du langage de programmation, il existe plusieurs types de boucles.</p>
-        <p>Algobox ne propose que deux types de boucles :</p>
+        <p>AlgoBox ne propose que deux types de boucles :</p>
         <ul>
             <li>La boucle <strong><code>Tant que</code></strong> (<code>While</code> en anglais)</li>
             <li>La boucle <strong><code>Pour</code></strong> (<code>For</code> en anglais)</li>
@@ -45,15 +45,15 @@
 
     <section>
         <h3>Exercice - Juste prix</h3>
-        <p>Écrire un algorithme qui demande à l'utilisateur de deviner un nombre compris entre 1 et 10000.</p>
+        <p>Écrire un algorithme qui demande à l'utilisateur de deviner un nombre compris entre 1 et 10 000.</p>
         <p>L'algorithme indique ensuite à l'utilisateur si le nombre à deviner est plus grand ou plus petit que celui qu'il a saisi.</p>
         <p>L'algorithme se termine lorsque l'utilisateur a trouvé le nombre à deviner.</p>
         <p>🏅 BONUS : Afficher le nombre de tentatives à la fin.</p>
         <p>
             🏆 SUPER BONUS : Ajouter un chrono pour mesurer le temps écoulé pendant le jeu. Si l'utilisateur dépasse
             le temps limite de 30 secondes, l'algorithme se termine et affiche un message d'échec
-            (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" target="_blank"><code>performance.now()</code></a> compatible avec Algobox pour vous aider).
-            Si l'utilisateur gagne on affiche le nombre de secondes écoulées.
+            (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" target="_blank"><code>performance.now()</code></a> compatible avec AlgoBox pour vous aider).
+            Si l'utilisateur gagne, on affiche le nombre de secondes écoulées.
         </p>
     </section>
 
@@ -62,8 +62,8 @@
         <p>La boucle <code>Pour</code> permet de répéter un bloc d'instructions un nombre de fois déterminé.</p>
         <p>Pour créer une boucle <code>Pour</code> sur AlgoBox, créer une nouvelle ligne puis cliquer sur le bouton suivant :</p>
         <figure>
-            <img src="assets/images/algobox-for.png" alt="AlgoBox ajouter boucle pour">
-            <figcaption>Ajouter une boucle pour sur AlgoBox</figcaption>
+            <img src="assets/images/algobox-for.png" alt="AlgoBox ajouter boucle Pour">
+            <figcaption>Ajouter une boucle Pour sur AlgoBox</figcaption>
         </figure>
         <p>
             Cette boucle est plus simple à écrire que la boucle <code>Tant que</code> et est <strong>plus adaptée à certains types de traitements</strong>
@@ -77,8 +77,8 @@
         <p>On remarque que la boucle <code>Pour</code> est <strong>plus simple à écrire et à comprendre</strong>.</p>
         <div data-alg="assets/files/loop-for.alg"></div>
         <p>
-            Malheureusement, Algobox <strong>ne permet pas d'effectuer une décrémentation</strong> avec la boucle <code>Pour</code>
-            (ce qui est généralement possible avec les langages de programmations classiques).
+            Malheureusement, AlgoBox <strong>ne permet pas d'effectuer une décrémentation</strong> avec la boucle <code>Pour</code>
+            (ce qui est généralement possible avec les langages de programmation classiques).
         </p>
     </section>
 
@@ -86,14 +86,14 @@
         <h3>Exercice - Notation avec étoiles</h3>
         <p>Écrire un algorithme qui demande à l'utilisateur de saisir une note entre 0 et 5.</p>
         <p>L'algorithme affiche ensuite la note saisie avec des étoiles.</p>
-        <p>Par exemple, si l'utilisateur saisit la note 3 alors l'algorithme affiche : ★★★☆☆</p>
+        <p>Par exemple, si l'utilisateur saisit la note 3, alors l'algorithme affiche : ★★★☆☆</p>
         <p>🏅 BONUS : Permettre à l'utilisateur de saisir la note maximale.</p>
     </section>
 
     <section>
         <h3>Exercice - Table de multiplication</h3>
         <p>Écrire un algorithme qui affiche la table de multiplication d'un nombre.</p>
-        <p>Par exemple, si l'utilisateur saisit le nombre 5 alors l'algorithme affiche :</p>
+        <p>Par exemple, si l'utilisateur saisit le nombre 5, alors l'algorithme affiche :</p>
         <ul>
             <li>5 x 1 = 5</li>
             <li>5 x 2 = 10</li>
@@ -109,7 +109,7 @@
     </section>
 
     <section>
-        <h3>Exercice - Calcul mentale</h3>
+        <h3>Exercice - Calcul mental</h3>
         <p>Le programme demande à l'utilisateur le nombre de questions.</p>
         <p>L'algorithme affiche ensuite une série de N calculs mentaux (des multiplications) générés aléatoirement.</p>
         <p>À la fin de la série, l'algorithme affiche le nombre de bonnes réponses.</p>
@@ -135,7 +135,7 @@
         <code>
             0, 1, 1, 2, 3, 5, 8, 13, 21, 34...
         </code>
-        <p>Écrire un algorithme demandant à l'utilisateur de saisir un nombre N et afficher le N premiers termes de la suite de Fibonacci.</p>
+        <p>Écrire un algorithme demandant à l'utilisateur de saisir un nombre N et affichant les N premiers termes de la suite de Fibonacci.</p>
     </section>
 
     <section>
@@ -156,7 +156,7 @@
             <li>Si le nombre est impair, on le multiplie par 3 et on ajoute 1</li>
         </ul>
         <p>On recommence ce processus jusqu'à obtenir le nombre 1.</p>
-        <p>Par exemple, si l'utilisateur saisit le nombre 13 alors l'algorithme affiche :</p>
+        <p>Par exemple, si l'utilisateur saisit le nombre 13, alors l'algorithme affiche :</p>
         <p>13 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1</p>
         <p>🏅 BONUS : Afficher le temps de vol (nombre d'itérations).</p>
         <p>🏆 SUPER BONUS : Afficher l'altitude max (plus grand nombre de la suite).</p>
@@ -167,7 +167,7 @@
         <p>Écrire un algorithme qui demande à l'utilisateur de saisir un message.</p>
         <p>L'algorithme demande ensuite à l'utilisateur de saisir un nombre.</p>
         <p>L'algorithme affiche ensuite le message chiffré en utilisant le code de César.</p>
-        <p>Par exemple, si l'utilisateur saisit le message "Bonjour" et le nombre 3 alors l'algorithme affiche : "Erqmrxu"</p>
+        <p>Par exemple, si l'utilisateur saisit le message "Bonjour" et le nombre 3, alors l'algorithme affiche : "Erqmrxu"</p>
         <p>Pour réaliser cet exercice, vous aurez besoin des fonctions suivantes :</p>
         <ul>
             <li><code>variable.length</code> : Permet de récupérer la taille d'une chaîne de caractères</li>
@@ -182,14 +182,14 @@
         <p>Écrire un algorithme qui demande à l'utilisateur de saisir un mot.</p>
         <p>L'algorithme affiche ensuite si le mot est un palindrome ou non.</p>
         <p>Un palindrome est un mot qui peut se lire dans les deux sens (de gauche à droite et de droite à gauche).</p>
-        <p>Par exemple, si l'utilisateur saisit le mot "radar" (ou "laval") alors l'algorithme affiche : "Le mot est un palindrome".</p>
+        <p>Par exemple, si l'utilisateur saisit le mot "radar" (ou "laval"), alors l'algorithme affiche : "Le mot est un palindrome".</p>
     </section>
 
     <section>
         <h3>Exercice - Pyramide</h3>
         <p>Écrire un algorithme qui demande à l'utilisateur de saisir un nombre.</p>
         <p>L'algorithme affiche ensuite une pyramide de N étages.</p>
-        <p>Par exemple, si l'utilisateur saisit le nombre 5 alors l'algorithme affiche :</p>
+        <p>Par exemple, si l'utilisateur saisit le nombre 5, alors l'algorithme affiche :</p>
         <pre style="box-shadow: none;">
             *
            ***
